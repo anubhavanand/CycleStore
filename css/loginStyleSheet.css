@@ -1,0 +1,15 @@
+.loginWindow {
+	position:fixed;
+	top:75px;
+	width: 100%;
+}
+
+.modal-dialog.style {
+	 width:800px;
+	 max-width:900px;
+}
+
+.btn.btn-primary.btn-signin {
+	width: 125px;
+	float: right;
+}
