@@ -135,3 +135,19 @@ nav ul ul li a:hover {
 .slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
   opacity:1;
 }
+
+.loginWindow {
+	position:fixed;
+	top:75px;
+	width: 100%;
+}
+
+.modal-dialog.style {
+	 width:800px;
+	 max-width:900px;
+}
+
+.btn.btn-primary.btn-signin {
+	width: 125px;
+	float: right;
+}
