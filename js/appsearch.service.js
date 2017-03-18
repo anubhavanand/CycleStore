@@ -9,6 +9,8 @@
             });
             return promise2;
         }
+
+        
     }
     cycleStoreApp.service("SearchDataSvc", searchData);
 })();

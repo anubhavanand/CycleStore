@@ -143,8 +143,20 @@ nav ul ul li a:hover {
 	float: right;
 }
 
-.searchWindow {
+.container {
+    width: 500px;
+    padding-left: 40px;
+    padding-top: 100px; /* Only to demonstrate */
+	align-items: center;
+	align-content: center;
+}
+
+.bikeCategory {
 	position:fixed;
-	top:75px;
+	top:50px;
 	width: 100%;
+	height: 50px;
+	background-color: #f2f2f2;
+	text-align: center;
+	
 }

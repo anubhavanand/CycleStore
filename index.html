@@ -99,22 +99,15 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="searchWindow" ng-show="ctrl.enableSearchPage">
+		<div class="bikeCategory" ng-show="ctrl.enableSearchPage">Road Bikes</div>
+		<div class="container" ng-show="ctrl.enableSearchPage">
 			<div class="row">
-				<ul class="list-group">
-					<li class="list-group-item" ng-repeat="bike in ctrl.bikes">
-						
-						<div class="media">
-							<div class="media-left">
-								<a href="#">
-									<img ng-src="{{bike.picture.thumbnail}}" />
-								</a>
-							</div>
-						</div>
-						<span>{{bike.name}}</span>
-					</li>
-				</ul>
+				<div class="col-xs-6 col-md-3" ng-repeat="bike in ctrl.bikes">
+					<a href="#" class="thumbnail">
+						<img ng-src="{{bike.picture.thumbnail}}" />
+					</a>
+					<a href="#">{{bike.name}}</a>
+				</div>
 			</div>
 		</div>
 
