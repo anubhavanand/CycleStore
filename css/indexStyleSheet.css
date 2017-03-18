@@ -1,13 +1,7 @@
-* {
-	margin: 0;
-}
-
-h1,h2,h3,h4,h5,h6,p {
-	margin-bottom: 20px;
-}
-
-html, body {
-	height: 100%;
+div.wrap {
+    width:960px;
+    margin: auto;
+	align-content: center;
 }
 
 nav {
@@ -72,17 +66,15 @@ nav ul ul li a:hover {
 
 .slider{
 	position: fixed;
-	width: 100%;
 }
 
 .slide{
 	position:fixed;
 	top:50px;
-	width: 100%;
 }
 
 .slide img {
-    max-width: 100%;
+    max-width: 960px;
     height: auto;
 }
 
@@ -138,13 +130,12 @@ nav ul ul li a:hover {
 
 .loginWindow {
 	position:fixed;
-	top:75px;
-	width: 100%;
 }
 
 .modal-dialog.style {
-	 width:800px;
-	 max-width:900px;
+	 top:75px;
+	 width: 800px;
+	 margin-left: 80px;
 }
 
 .btn.btn-primary.btn-signin {
