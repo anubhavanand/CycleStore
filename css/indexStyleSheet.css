@@ -151,3 +151,9 @@ nav ul ul li a:hover {
 	width: 125px;
 	float: right;
 }
+
+.searchWindow {
+	position:fixed;
+	top:75px;
+	width: 100%;
+}

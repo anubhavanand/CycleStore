@@ -1,0 +1,34 @@
+{
+  "bikes": [
+    {
+      "gender": "male",
+      "name": "Hero SuperStar 26T 18 Speed Dwrim Glsy - Black & Orange",
+      "price": "Rs 23,500/-",
+      "registered": "2016-02-21 21:33:29",
+      "phone": "02-2217-5264",
+      "cell": "0483-059-005",
+      "id": 1,
+      "picture": {
+        "large": "https://montra.in/wp-content/uploads/sites/12/2016/06/unplugged-1-1.png",
+        "medium": "https://montra.in/wp-content/uploads/sites/12/2016/06/unplugged-1-1.png",
+        "thumbnail": "https://www.cyclinghub.in/media/catalog/product/cache/6/small_image/190x/9df78eab33525d08d6e5fb8d27136e95/s/s/sssr26bkor01_1.jpg?t=1448526733"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "male",
+      "name": "Hero Marvel Avenger Youth Bike",
+      "price": "Rs 13,500/-",
+      "registered": "2016-02-21 21:33:29",
+      "phone": "02-2217-5264",
+      "cell": "0483-059-005",
+      "id": 1,
+      "picture": {
+        "large": "https://montra.in/wp-content/uploads/sites/12/2016/06/unplugged-1-1.png",
+        "medium": "https://montra.in/wp-content/uploads/sites/12/2016/06/unplugged-1-1.png",
+        "thumbnail": "https://www.cyclinghub.in/media/catalog/product/cache/6/small_image/190x/9df78eab33525d08d6e5fb8d27136e95/s/a/savr20whbl01_m1.jpg?t=1448526733"
+      },
+      "nat": "AU"
+    }
+  ]
+}
