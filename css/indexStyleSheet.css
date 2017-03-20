@@ -57,7 +57,7 @@ nav ul ul li {
 }
 
 nav ul ul li a:hover {
-    color: grey;
+    color: blue;
 }
 
 .center-grey{
@@ -75,7 +75,7 @@ nav ul ul li a:hover {
 
 .slide img {
     max-width: 960px;
-    height: auto;
+    height: 460px;
 }
 
 .leftArrow {
@@ -143,20 +143,20 @@ nav ul ul li a:hover {
 	float: right;
 }
 
-.container {
-    width: 500px;
-    padding-left: 40px;
-    padding-top: 100px; /* Only to demonstrate */
-	align-items: center;
-	align-content: center;
+.container.innerContainer {
+    width: 960px;
+    background-color: #f2f2f2;
+    padding-top: 120px; /* Only to demonstrate */
+
+	border: black;
 }
 
 .bikeCategory {
 	position:fixed;
 	top:50px;
-	width: 100%;
-	height: 50px;
+	height: 60px;
 	background-color: #f2f2f2;
 	text-align: center;
-	
+	width: 960px;
+	border: black;
 }
