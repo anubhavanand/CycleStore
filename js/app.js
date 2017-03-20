@@ -1,5 +1,8 @@
 var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate']);
+
 cycleStoreApp.controller('CycleStoreController', CycleStoreController);
+cycleStoreApp.controller('LoginController', LoginController);
+
 function CycleStoreController(SliderImageSvc, SearchDataSvc) {
     this.images = SliderImageSvc.images;
     var self = this;
@@ -29,6 +32,8 @@ function CycleStoreController(SliderImageSvc, SearchDataSvc) {
         this.enableSearchPage = false;
         this.enableLoginPage = true;
     }
+}
 
-
+function LoginController() {
+    
 }

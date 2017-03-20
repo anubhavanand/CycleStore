@@ -76,5 +76,23 @@
       },
       "nat": "AU"
     }
+  ],
+
+  "users": [
+      {
+      "id": "1",
+      "email": "anubhavanand85@gmail.com",
+      "mobileNumber": {
+          "countryCode": "+91",
+          "number": "9817704483"
+      },
+      "name": {
+        "firstName": "Anubhav",
+        "middleName": "",
+        "lastName": "Anand"
+      },
+      "gender": "M",
+      "password": "123456"
+    }
   ]
 }
