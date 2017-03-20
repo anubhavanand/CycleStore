@@ -6,10 +6,12 @@ cycleStoreApp.controller('LoginController', LoginController);
 function CycleStoreController(SliderImageSvc, SearchDataSvc) {
     this.images = SliderImageSvc.images;
     var self = this;
+
     var promiseBikes = SearchDataSvc.getBikes();
     promiseBikes.then(function (data) {
         self.bikes = data;
     });
+
     this.showImage = true;
     this.toggleShowImage = function () {
         this.showImage = false;
@@ -34,6 +36,11 @@ function CycleStoreController(SliderImageSvc, SearchDataSvc) {
     }
 }
 
-function LoginController() {
-    
+function LoginController(LoginSvc) {
+    var self = this;
+
+    var usersData = LoginSvc.getUserData();
+    usersData.then(function (data) {
+        self.users = data;
+    });
 }
