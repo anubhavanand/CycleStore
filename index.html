@@ -47,24 +47,10 @@
 		</nav>
 
 		<div class="wrap">
-
 			<div ng-include="'login.html'"></div>
-
-			<div class="bikeCategory" ng-show="ctrl.enableSearchPage">Road Bikes</div>
-
-			<div class="container" ng-show="ctrl.enableSearchPage">
-				<div class="row">
-					<div class="col-xs-6 col-md-3" ng-repeat="bike in ctrl.bikes">
-						<a href="#" class="thumbnail">
-							<img ng-src="{{bike.picture.thumbnail}}" />
-						</a>
-						<a href="#">{{bike.name}}</a>
-					</div>
-				</div>
-			</div>
 		</div>
 		<div class="bikeCategory" ng-show="ctrl.enableSearchPage">
-		<H1>Road Bikes</H1>
+			<H1>Road Bikes</H1>
 		</div>
 		<div class="container innerContainer" ng-show="ctrl.enableSearchPage">
 			<div class="row">
@@ -75,14 +61,12 @@
 					<a href="#">{{bike.name}}
 						<p>Price {{bike.price}}</p>
 					</a>
-					
+
 				</div>
 			</div>
 		</div>
 
-			<slider images="ctrl.images" ng-show="ctrl.showImage" />
-		</div>
+		<slider images="ctrl.images" ng-show="ctrl.showImage" />
 	</div>
 </body>
-
 </html>
