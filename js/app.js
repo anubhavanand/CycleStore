@@ -36,11 +36,11 @@ function CycleStoreController(SliderImageSvc, SearchDataSvc) {
     }
 }
 
-function LoginController(LoginSvc) {
-    var self = this;
+function LoginController() {
+   /* var self = this;
 
     var usersData = LoginSvc.getUserData();
     usersData.then(function (data) {
         self.users = data;
-    });
+    });*/
 }
