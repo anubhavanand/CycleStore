@@ -1,0 +1,18 @@
+<div ng-controller="SearchController as SearchCtrl">
+    <div class="bikeCategory" ng-show="ctrl.enableSearchPage">
+        <H1>Road Bikes</H1>
+    </div>
+
+    <div class="container innerContainer" ng-show="ctrl.enableSearchPage">
+        <div class="row">
+            <div class="col-xs-6 col-md-3" ng-repeat="bike in SearchCtrl.bikes">
+                <a href="#" class="thumbnail">
+                    <img ng-src="{{bike.picture.thumbnail}}" />
+                </a>
+                <a href="#">{{bike.name}}
+							<p>Price {{bike.price}}</p>
+			</a>
+            </div>
+        </div>
+    </div>
+</div><!--Search Controller End here   -->

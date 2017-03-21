@@ -3,14 +3,14 @@ var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate']);
 cycleStoreApp.controller('CycleStoreController', CycleStoreController);
 cycleStoreApp.controller('LoginController', LoginController);
 
-function CycleStoreController(SliderImageSvc, SearchDataSvc) {
+function CycleStoreController(SliderImageSvc) {
     this.images = SliderImageSvc.images;
     var self = this;
 
-    var promiseBikes = SearchDataSvc.getBikes();
+    /*var promiseBikes = SearchDataSvc.getBikes();
     promiseBikes.then(function (data) {
         self.bikes = data;
-    });
+    });*/
 
     this.showImage = true;
     this.toggleShowImage = function () {
