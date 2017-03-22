@@ -37,10 +37,25 @@ function CycleStoreController(SliderImageSvc) {
 }
 
 function LoginController() {
-   /* var self = this;
+    /*function LoginController(AuthenticationService) {
+    var self = this;
 
-    var usersData = LoginSvc.getUserData();
-    usersData.then(function (data) {
-        self.users = data;
-    });*/
+    self.login = login;
+
+    (function initController() {
+        // reset login status
+        AuthenticationService.ClearCredentials();
+    })();
+
+    function login() {
+        AuthenticationService.Login(self.username, self.password, function (response) {
+            if (response.success) {
+                console.log("success received");
+                AuthenticationService.SetCredentials(self.username, self.password);
+                $location.path('/');
+            } else {
+
+            }
+        });
+    };*/
 }

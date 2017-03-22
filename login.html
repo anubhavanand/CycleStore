@@ -12,19 +12,19 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <div class="well">
-                            <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
-                                <div class="form-group">
+                            <form id="form" ng-submit="loginCtrl.login()" role="form">
+                                <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
                                     <label for="username" class="control-label">Email/Mobile Number</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username">
-                                    <span class="help-block"></span>
+                                    <input type="text" class="form-control" id="username" name="username" title="Please enter you username" ng-model="loginCtrl.username" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
                                     <label for="password" class="control-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">											<span class="help-block"></span>
+                                    <input type="password" class="form-control" id="password" name="password" title="Please enter your password" ng-model="loginCtrl.password" required>
                                 </div>
-                                <div id="loginErrorMsg" class="alert alert-error hide">Wrong username or password</div>
-                                <a href="/forgot/">Forgot Password?</a>
-                                <button type="submit" class="btn btn-primary btn-signin">Sign In</button>
+                                <div class="form-actions">
+                                    <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary btn-signin">Sign In</button>
+                                    <a href="/forgot/">Forgot Password?</a>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 <li><span class="fa fa-check text-success"></span> Save your favorites</li>
                             </ul>
                             <p>
-                                <a href="/new-customer/" style="align: auto;">Yes please, register now!</a>
+                                <a href="/register/" style="align: auto;">Yes please, register now!</a>
                             </p>
                         </div>
                     </div>
