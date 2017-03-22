@@ -80,7 +80,7 @@
 
   "users": [
       {
-      "id": "9871704483",
+      "id": "98",
       "email": "anubhavanand85@gmail.com",
       "mobileNumber": {
           "countryCode": "+91",
@@ -92,7 +92,7 @@
         "lastName": "Anand"
       },
       "gender": "M",
-      "password": "123456"
+      "password": "123"
     }
   ]
 }

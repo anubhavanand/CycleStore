@@ -1,53 +1,56 @@
-<div class="loginWindow"  ng-controller="LoginController as loginCtrl">
-    <div id="login-overlay" class="modal-dialog style" ng-show="ctrl.enableLoginPage">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" ng-click="ctrl.showHomePage()">
-                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Please Sign In</h4>
-            </div>
+ <div ng-controller="LoginController as loginCtrl"> 
+    <div class="loginWindow">
+        <div id="login-overlay" class="modal-dialog style" ng-show="ctrl.enableLoginPage">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="ctrl.showHomePage()">
+                        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Please Sign In</h4>
+                    <span class="label label-danger" ng-if="loginCtrl.errorMessage">Authentication failed!</span>
+                </div>
 
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="well">
-                            <form id="form" ng-submit="loginCtrl.login()" role="form">
-                                <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
-                                    <label for="username" class="control-label">Email/Mobile Number</label>
-                                    <input type="text" class="form-control" id="username" name="username" title="Please enter you username" ng-model="loginCtrl.username" required>
-                                </div>
-                                <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
-                                    <label for="password" class="control-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" title="Please enter your password" ng-model="loginCtrl.password" required>
-                                </div>
-                                <div class="form-actions">
-                                    <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary btn-signin">Sign In</button>
-                                    <a href="/forgot/">Forgot Password?</a>
-                                </div>
-                            </form>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="well">
+                                <form id="form" ng-submit="loginCtrl.login()" role="form">
+                                    <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                                        <label for="username" class="control-label">Email/Mobile Number</label>
+                                        <input type="text" class="form-control" id="username" name="username" title="Please enter you username" ng-model="loginCtrl.username" required>
+                                    </div>
+                                    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                                        <label for="password" class="control-label">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" title="Please enter your password" ng-model="loginCtrl.password" required>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary btn-signin">Sign In</button>
+                                        <a href="/forgot/">Forgot Password?</a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="well">
-                            <p class="lead">
-                                Register now for <span class="text-success">FREE</span>
-                            </p>
-                            <ul>
-                                <li><span class="fa fa-check text-success"></span> See all your orders</li>
-                                <li><span class="fa fa-check text-success"></span> Track your Order</li>
-                                <li><span class="fa fa-check text-success"></span> Fast re-order
-                                </li>
-                                <li><span class="fa fa-check text-success"></span> Save your favorites</li>
-                            </ul>
-                            <p>
-                                <a href="/register/" style="align: auto;">Yes please, register now!</a>
-                            </p>
+                        <div class="col-xs-6">
+                            <div class="well">
+                                <p class="lead">
+                                    Register now for <span class="text-success">FREE</span>
+                                </p>
+                                <ul>
+                                    <li><span class="fa fa-check text-success"></span> See all your orders</li>
+                                    <li><span class="fa fa-check text-success"></span> Track your Order</li>
+                                    <li><span class="fa fa-check text-success"></span> Fast re-order
+                                    </li>
+                                    <li><span class="fa fa-check text-success"></span> Save your favorites</li>
+                                </ul>
+                                <p>
+                                    <a href="/register/" style="align: auto;">Yes please, register now!</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 </div>
