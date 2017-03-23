@@ -5,7 +5,7 @@
         .module('CycleStoreApp')
         .controller('LoginController', LoginController);
 
-    function LoginController(AuthenticationService, $rootScope) {
+    function LoginController(AuthenticationService, $scope) {
         var self = this;
 
         self.login = login;
@@ -18,9 +18,8 @@
         function login() {
             AuthenticationService.Login(self.username, self.password, function (response) {
                 if (response.success) {
-                	console.log("Logged in");
                     AuthenticationService.SetCredentials(self.username, self.password);
-                    $rootScope.$emit("CallShowHomePage", {});
+                    $scope.$parent.ctrl.showHomePage();
                 } else {
                     self.errorMessage = true;
                 }

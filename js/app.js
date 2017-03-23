@@ -2,17 +2,13 @@ var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate']);
 
 cycleStoreApp.controller('CycleStoreController', CycleStoreController);
 
-function CycleStoreController(SliderImageSvc, $rootScope) {
+function CycleStoreController(SliderImageSvc) {
     this.images = SliderImageSvc.images;
     var self = this;
 
     this.showImage = true;
     this.enableSearchPage = false;
     this.enableLoginPage = false;
-
-    $rootScope.$on("CallShowHomePage", function(){
-        self.showHomePage();
-    });
 
     this.toggleShowImage = function () {
         this.showImage = false;
