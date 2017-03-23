@@ -43,7 +43,8 @@
 						<li><a href="#">Favourites</a></li>
 						<li><a href="#">Orders</a></li>
 						<li><a href="#">Account</a></li>
-						<li><a href="#" ng-click="ctrl.showLoginPage()">Sign In</a></li>
+						<li ng-hide="ctrl.loginName"><a href="#" ng-click="ctrl.showLoginPage()">Sign In</a></li>
+						<li ng-show="ctrl.loginName"><span class="loginNameStyle">Hi {{ctrl.loginName}}!</span><a href="#">Sign Out</a></li>
 					</ul>
 				</li>
 			</ul>

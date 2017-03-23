@@ -138,6 +138,10 @@ nav ul ul li a:hover {
 	 margin-left: 80px;
 }
 
+.loginNameStyle {
+	color: #ffffff;
+}
+
 .btn.btn-primary.btn-signin {
 	width: 125px;
 	float: right;

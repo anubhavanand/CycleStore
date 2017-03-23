@@ -10,6 +10,8 @@ function CycleStoreController(SliderImageSvc) {
     this.enableSearchPage = false;
     this.enableLoginPage = false;
 
+    this.loginName = "";
+
     this.toggleShowImage = function () {
         this.showImage = false;
     }
