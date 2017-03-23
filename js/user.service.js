@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('CycleStoreApp')
         .factory('UserService', UserService);
 
     function UserService($http) {

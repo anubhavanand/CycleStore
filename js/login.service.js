@@ -1,19 +1,31 @@
 (function () {
-    var cycleStoreApp = angular.module("CycleStoreApp");
-    cycleStoreApp.controller('LoginController', LoginController);
+    'use strict';
 
-    function LoginController($http){
+    angular
+        .module('CycleStoreApp')
+        .controller('LoginController', LoginController);
+
+    function LoginController(AuthenticationService, $rootScope) {
         var self = this;
 
-        self.login = function() {
-			return $http.get('http://localhost:3000/users/' + self.username)
-			.then(function(response) {
-				if(response.data != null && response.data.password == self.password) {
-					
-				} else {
-					self.errorMessage = true;
-				}
-			});
-		}
+        self.login = login;
+
+        (function initController() {
+            // reset login status
+            AuthenticationService.ClearCredentials();
+        })();
+
+        function login() {
+            AuthenticationService.Login(self.username, self.password, function (response) {
+                if (response.success) {
+                	console.log("Logged in");
+                    AuthenticationService.SetCredentials(self.username, self.password);
+                    $rootScope.$emit("CallShowHomePage", {});
+                } else {
+                    self.errorMessage = true;
+                }
+            });
+        };
     }
+
 })();

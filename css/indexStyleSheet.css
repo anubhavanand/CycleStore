@@ -80,15 +80,15 @@ nav ul ul li a:hover {
 
 .leftArrow {
 	position: fixed;
-	top: 200px;
-	left: 2%;
+	top: 210px;
+	margin-left: 20px;
 	font-size: 40px;
 }
 
 .rightArrow {
 	position: fixed;
-	top: 200px;
-	right: 2%;
+	top: 210px;
+	margin-left: 900px;
 	font-size: 40px;
 }
 
