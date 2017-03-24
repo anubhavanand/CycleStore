@@ -18,10 +18,10 @@
 
 <body ng-app="CycleStoreApp">
 	<div ng-controller="CycleStoreController as ctrl">
-		<div ng-include="'nav.html'"></div>
+		<div ng-include="'html/nav.html'"></div>
 		<div class="wrap">
-			<div ng-include="'login.html'"></div>
-			<div ng-include="'search.html'"></div>
+			<div ng-include="'html/login.html'"></div>
+			<div ng-include="'html/search.html'"></div>
 			<slider images="ctrl.images" ng-show="ctrl.showImage" />
 		</div>
 	</div>
