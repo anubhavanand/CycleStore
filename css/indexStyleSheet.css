@@ -164,3 +164,7 @@ nav ul ul li a:hover {
 	width: 960px;
 	border: black;
 }
+
+.registrationWindow {
+	position:fixed;
+}
