@@ -1,16 +1,75 @@
 <div ng-controller="RegisterController as registerCtrl">
 	<div class="registrationWindow" ng-show="ctrl.enableRegistrationPage">
 		<div id="register-overlay" class="modal-dialog style">
-			<div class="modal-content">
-				<div class="modal-header">
+            <form id="form" ng-submit="registerCtrl.register()" role="form" ng-if="!ctrl.registrationSuccess">
+			    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" ng-click="ctrl.showHomePage()">
+                            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Create Account</h4>
+                        <span class="label label-danger" ng-if="registerCtrl.errorMessage">{{registerCtrl.errorMessage}}</span>
+                    </div> <!-- end of header div -->
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="well">
+                                        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+                                            <label for="email" class="control-label">Email Address*:</label>
+                                            <input type="text" class="form-control" id="email" name="email" title="Please enter you email" ng-model="registerCtrl.email" required>
+                                        </div>
+                                        <div class="form-group" ng-class="{ 'has-error': form.mobileNumber.$dirty && form.mobileNumber.$error.required }">
+                                            <label for="mobileNumber" class="control-label">Mobile*:</label>
+                                            +91 <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" title="Please enter you mobile" ng-model="registerCtrl.mobileNumber" required>
+                                        </div>
+                                        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                                            <label for="password" class="control-label">Password*:</label>
+                                            <input type="password" class="form-control" id="password" name="password" title="Please enter your password" ng-model="registerCtrl.password" required>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <div class="well">
+                                    <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+                                        <label for="firstName" class="control-label">First Name:</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" title="Please enter you firstName" ng-model="registerCtrl.firstName">
+                                    </div>
+                                    <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+                                        <label for="lastName" class="control-label">Last Name:</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" title="Please enter you lastName" ng-model="registerCtrl.lastName">
+                                    </div>
+                                    <div class="form-group" ng-class="{ 'has-error': form.address.$dirty && form.address.$error.required }">
+                                        <label for="address" class="control-label">Address:</label>
+                                        <input type="address" class="form-control" id="address" name="address" title="Please enter your address" ng-model="registerCtrl.address">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end of body div -->
+
+                    <div class="modal-footer">
+                        <div class="form-actions">
+                            <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary btn-signin">Register</button>
+                        </div>
+                    </div>
+
+			    </div>
+            </form>
+
+            <div class="modal-content" ng-if="ctrl.registrationSuccess">
+                <div class="modal-header">
                     <button type="button" class="close" ng-click="ctrl.showHomePage()">
                         <span aria-hidden="true">×</span><span class="sr-only">Close</span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">Create Account</h4>
-                    <span class="label label-danger" ng-if="registerCtrl.errorMessage">{{registerCtrl.errorMessage}}</span>
-                    <span class="label label-success" ng-if="registerCtrl.successMessage">Registraion Successfull!</span>
+                    <span class="label label-success">Registration Successfull!</span>
+                    <a href="#" ng-click="ctrl.showLoginPage()">Click to Login</a>
                 </div>
-			</div>
+            </div>
+
 		</div>
 	</div>
 </div>

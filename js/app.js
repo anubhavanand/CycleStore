@@ -11,6 +11,7 @@ function CycleStoreController(SliderImageSvc) {
     this.enableSearchPage = false;
     this.enableLoginPage = false;
     this.enableRegistrationPage = false;
+    this.registrationSuccess = false;
 
     this.showHomePage = function () {
         this.enableSearchPage = false;
@@ -31,5 +32,6 @@ function CycleStoreController(SliderImageSvc) {
         this.enableSearchPage = false;
         this.enableLoginPage = false;
         this.enableRegistrationPage = true;
+        this.registrationSuccess = false;
     }
 }
