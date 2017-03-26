@@ -48,7 +48,7 @@ nav ul ul {
 	z-index: 99;
 	text-align: left;
     border-top: 0;
-    margin-left: 0;
+    margin-left: 15px;
 }
 
 nav ul ul li {
@@ -138,8 +138,9 @@ nav ul ul li a:hover {
 	 margin-left: 80px;
 }
 
-.loginNameStyle {
-	color: #ffffff;
+.subMenuStyle {
+	color:#ffffff;
+	margin-left: 10px;
 }
 
 .btn.btn-primary.btn-signin {

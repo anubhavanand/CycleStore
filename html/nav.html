@@ -2,7 +2,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="#" ng-click="ctrl.showHomePage()">Home</a></li>
+					<a href="#" ng-click="ctrl.showHomePage()"><span class="glyphicon glyphicon-home"></span></a></li>
 				<li>
 					<a href="#">Bicycles</a>
 					<ul>
@@ -13,20 +13,23 @@
 						<li><a href="#" ng-click="navCtrl.showSearchPage('hybridbikes')">Hybrid Bikes</a></li>
 						<li><a href="#" ng-click="navCtrl.showSearchPage('vintagebikes')">Vintage Bikes</a></li>
 					</ul>
-					<a href="#">Accessories</a></li>
+				</li>
+				<li>
+					<a href="#">Accessories</a>
+				</li>
 				<li>
 					<a href="#">Services</a></li>
 				<li>
 					<a href="#">Support</a></li>
 				<li>
-					<a href="#"><img class="imageAlign" src="images/shopping_cart.jpg" alt="shopping_cart" /></a>
+					<a href="#"><span class="glyphicon glyphicon-user"></span></a>
 					<ul>
-						<li><a href="#">Bag</a></li>
-						<li><a href="#">Favourites</a></li>
-						<li><a href="#">Orders</a></li>
-						<li><a href="#">Account</a></li>
-						<li ng-hide="ctrl.loginName"><a href="#" ng-click="ctrl.showLoginPage()">Sign In</a></li>
-						<li ng-show="ctrl.loginName"><span class="loginNameStyle">Hi {{ctrl.loginName}}!</span><a href="#">Sign Out</a></li>
+						<li><span class="glyphicon glyphicon-briefcase subMenuStyle"></span><a href="#">Bag</a></li>
+						<li><span class="glyphicon glyphicon-heart subMenuStyle"></span><a href="#">Favourites</a></li>
+						<li><span class="glyphicon glyphicon-gift subMenuStyle"></span><a href="#">Orders</a></li>
+						<li><span class="glyphicon glyphicon-cog subMenuStyle"></span><a href="#">Account</a></li>
+						<li ng-hide="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><a href="#" ng-click="ctrl.showLoginPage()">Sign In</a></li>
+						<li ng-show="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><span class="subMenuStyle">Hi {{ctrl.loginName}}!</span><a href="#">Sign Out</a></li>
 					</ul>
 				</li>
 			</ul>
