@@ -7,9 +7,7 @@
             //clear previous data before making a new search
             $scope.$parent.ctrl.bikes = [];
             self.setSearchedBanner(criteria);
-            $scope.$parent.ctrl.showImage = false;
-            $scope.$parent.ctrl.enableLoginPage = false;
-            $scope.$parent.ctrl.enableSearchPage = true;
+            $scope.$parent.ctrl.showSearchPage();
             var promise =SearchDataSvc.getBikes(criteria);
             promise.then(function(data){
                 $scope.$parent.ctrl.bikes = data;

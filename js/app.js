@@ -18,6 +18,7 @@ function CycleStoreController(SliderImageSvc) {
         this.enableLoginPage = false;
         this.showImage = true;
         this.enableRegistrationPage = false;
+        this.registrationSuccess = false;
     }
 
     this.showLoginPage = function () {
@@ -25,6 +26,7 @@ function CycleStoreController(SliderImageSvc) {
         this.enableSearchPage = false;
         this.enableLoginPage = true;
         this.enableRegistrationPage = false;
+        this.registrationSuccess = false;
     }
 
     this.showRegistrationPage = function () {
@@ -32,6 +34,14 @@ function CycleStoreController(SliderImageSvc) {
         this.enableSearchPage = false;
         this.enableLoginPage = false;
         this.enableRegistrationPage = true;
+        this.registrationSuccess = false;
+    }
+
+    this.showSearchPage = function () {
+        this.showImage = false;
+        this.enableSearchPage = true;
+        this.enableLoginPage = false;
+        this.enableRegistrationPage = false;
         this.registrationSuccess = false;
     }
 }
