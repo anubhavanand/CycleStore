@@ -1,11 +1,19 @@
-var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate']);
+var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate', 'ngRoute', 'ngCookies']);
 
 cycleStoreApp.controller('CycleStoreController', CycleStoreController);
 
-function CycleStoreController(SliderImageSvc) {
+function CycleStoreController(SliderImageSvc, $rootScope, $cookies, $http) {
     var self = this;
 
     this.images = SliderImageSvc.images;
+    this.signOut = signOut;
+
+    $rootScope.globals = $cookies.getObject('globals') || {};
+    if ($rootScope.globals.currentUser) {
+        console.log('called on refresh ' + $rootScope.globals.currentUser.username);
+        $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+        self.loginName = $rootScope.globals.currentUser.username;
+    }
 
     this.showImage = true;
     this.enableSearchPage = false;
@@ -43,5 +51,12 @@ function CycleStoreController(SliderImageSvc) {
         this.enableLoginPage = false;
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
+    }
+
+    function signOut() {
+        $rootScope.globals = {};
+        $cookies.remove('globals');
+        $http.defaults.headers.common.Authorization = 'Basic';
+        self.loginName = "";
     }
 }

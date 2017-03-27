@@ -29,7 +29,7 @@
 						<li><span class="glyphicon glyphicon-gift subMenuStyle"></span><a href="#">Orders</a></li>
 						<li><span class="glyphicon glyphicon-cog subMenuStyle"></span><a href="#">Account</a></li>
 						<li ng-hide="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><a href="#" ng-click="ctrl.showLoginPage()">Sign In</a></li>
-						<li ng-show="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><span class="subMenuStyle">Hi {{ctrl.loginName}}!</span><a href="#">Sign Out</a></li>
+						<li ng-show="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><span class="subMenuStyle">Hi {{ctrl.loginName}}!</span><a href="#" ng-click="ctrl.signOut()">Sign Out</a></li>
 					</ul>
 				</li>
 			</ul>

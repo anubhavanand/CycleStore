@@ -5,7 +5,7 @@
         .module('CycleStoreApp')
         .factory('AuthenticationService', AuthenticationService);
 
-    function AuthenticationService($http, $rootScope, $timeout, UserService) {
+    function AuthenticationService($http, $cookies, $rootScope, $timeout, UserService) {
         var service = {};
 
         service.Login = Login;
@@ -54,14 +54,14 @@
             $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
 
             // store user details in globals cookie that keeps user logged in for 1 day (or until they logout)
-            /*var cookieExp = new Date();
+            var cookieExp = new Date();
             cookieExp.setDate(cookieExp.getDate() + 1);
-            $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });*/
+            $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
         }
 
         function ClearCredentials() {
             $rootScope.globals = {};
-            //$cookies.remove('globals');
+            $cookies.remove('globals');
             $http.defaults.headers.common.Authorization = 'Basic';
         }
     }
