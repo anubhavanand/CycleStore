@@ -1,3 +1,11 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 0;
+}
+
 div.wrap {
     width:960px;
     margin: auto;
@@ -23,6 +31,8 @@ nav ul {
 
 nav ul li {
     display: inline-block;
+	font-size:1.15rem;
+	font-weight:600
 }
 
 nav ul li a {
@@ -66,29 +76,32 @@ nav ul ul li a:hover {
 
 .slider{
 	position: fixed;
+	top:50px;
 }
 
 .slide{
-	position:fixed;
+	position: fixed;
 	top:50px;
 }
 
 .slide img {
-    max-width: 960px;
-    height: 460px;
+	max-width: 100%; 
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .leftArrow {
 	position: fixed;
-	top: 210px;
-	margin-left: 20px;
+	top: 250px;
+	margin-left: 2%;
 	font-size: 40px;
 }
 
 .rightArrow {
 	position: fixed;
-	top: 210px;
-	margin-left: 900px;
+	top: 250px;
+	margin-left: 96%;
 	font-size: 40px;
 }
 
@@ -130,6 +143,8 @@ nav ul ul li a:hover {
 
 .loginWindow {
 	position:fixed;
+	height: 100%;
+    width: 100%;
 }
 
 .modal-dialog.style {
