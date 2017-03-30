@@ -22,13 +22,17 @@
 
 <body ng-app="CycleStoreApp">
 	<div ng-controller="CycleStoreController as ctrl">
-		<div ng-include="'html/nav.html'"></div>
-		<div class="wrap">
-			<div ng-include="'html/login.html'"></div>
-			<div ng-include="'html/register.html'"></div>
-		</div>
-		<div ng-include="'html/search.html'"></div>
-		<div ng-include="'html/home.html'"></div>
+		<header>
+			<div ng-include="'html/nav.html'"></div>
+		</header>
+		<section>
+			<div class="wrap">
+				<div ng-include="'html/login.html'"></div>
+				<div ng-include="'html/register.html'"></div>
+			</div>
+			<div ng-include="'html/search.html'"></div>
+			<div ng-include="'html/home.html'"></div>
+		</section>
 	</div>
 </body>
 </html>

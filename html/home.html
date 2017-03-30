@@ -1,7 +1,8 @@
 <div ng-controller="HomeController as homeCtrl">
-	<div class="homePage" ng-show="ctrl.showImage">
+	<div ng-show="ctrl.showImage">
 	  <div class="slide" ng-repeat="image in homeCtrl.images" ng-show="image.visible">
 	    <img ng-src="../images/{{image.src}}" />
+			<div class="subSection"><h1>Test</h1></div>
 	  </div>
 	  <div class="leftArrow">
 	  	<a href="#" ng-click="homeCtrl.prev()">
@@ -12,8 +13,6 @@
 	    <a href="#" ng-click="homeCtrl.next()">
 	      <span class="glyphicon glyphicon-menu-right arrowColour"></span>
 	    </a>
-	  </div>
-	  <div class="sect">
 	  </div>
 	</div>
 </div> 
