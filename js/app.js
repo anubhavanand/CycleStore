@@ -2,10 +2,10 @@ var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate', 'ngRoute', 'ng
 
 cycleStoreApp.controller('CycleStoreController', CycleStoreController);
 
-function CycleStoreController(SliderImageSvc, $rootScope, $cookies, $http) {
+function CycleStoreController($rootScope, $cookies, $http) {
     var self = this;
 
-    this.images = SliderImageSvc.images;
+    //this.images = SliderImageSvc.images;
     this.signOut = signOut;
 
     $rootScope.globals = $cookies.getObject('globals') || {};

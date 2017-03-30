@@ -74,9 +74,10 @@ nav ul ul li a:hover {
        background:#f2f2f2;
 }
 
-.slider{
+.homePage{
 	position: fixed;
 	top:50px;
+	height: 100%;
 }
 
 .slide{
