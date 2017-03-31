@@ -1,10 +1,12 @@
 <div ng-controller="HomeController as homeCtrl">
 	<div ng-show="ctrl.showImage">
 	  <div class="slide" ng-repeat="image in homeCtrl.images" ng-show="image.visible">
-	    <img ng-src="../images/{{image.src}}" />
-			<div class="subSection"><h1>Test</h1></div>
+	    <img class="sliderImage" ng-src="../images/{{image.src}}" />
 	  </div>
-	  <div class="leftArrow">
+		<div class="slideCover">
+	    <img class="sliderImage" ng-src="../images/image1.jpg" />
+	  </div>
+		<div class="leftArrow">
 	  	<a href="#" ng-click="homeCtrl.prev()">
 	      <span class="glyphicon glyphicon-menu-left arrowColour"></span>
 	  	</a>
@@ -14,5 +16,8 @@
 	      <span class="glyphicon glyphicon-menu-right arrowColour"></span>
 	    </a>
 	  </div>
+		<div class="subSection"><h1>Test</h1></div>
+		<div class="subSection1"><h1>Test1</h1></div>
+		<div class="footer_home"><h1>Footer</h1></div>
 	</div>
 </div> 

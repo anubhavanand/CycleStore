@@ -1,0 +1,70 @@
+
+.slide{
+	position: absolute;
+	top:50px;
+}
+
+.slideCover {
+	position: relative;
+	top: 50px;
+	opacity: 0;
+}
+
+.sliderImage {
+	max-width: 100%; 
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.leftArrow {
+	position: absolute;
+	top: 35%;
+	margin-left: 2%;
+	font-size: 5.15rem;
+	font-weight:600;
+}
+
+.rightArrow {
+	position: absolute;
+	top: 35%;
+	margin-left: 94%;
+	font-size: 5.15rem;
+	font-weight:600;
+}
+
+.arrowColour {
+	color: whitesmoke;
+}
+
+.leftArrow a span {
+   visibility: hidden;
+}  
+
+.leftArrow:hover a span {
+   visibility: visible;
+}
+
+.rightArrow a span {
+   visibility: hidden;
+}  
+
+.rightArrow:hover a span {
+   visibility: visible;
+}
+
+.slide.ng-hide-add, .slide.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+ 
+.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
+  opacity:0;
+}
+ 
+.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}

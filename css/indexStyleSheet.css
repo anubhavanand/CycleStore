@@ -12,130 +12,6 @@ div.wrap {
 	align-content: center;
 }
 
-nav {
-	position: fixed;
-	width: 100%;
-	height: 50px;
-	background-color: rgba(0, 0, 0, 1.0);
-	z-index: 1000;
-	text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    min-width: 200px;
-}
-
-nav ul li {
-    display: inline-block;
-	font-size:1.15rem;
-	font-weight:600
-}
-
-nav ul li a {
-	text-decoration: none;
-	color: #fff;
-	margin-left: 10px;
-	margin-right: 20px;
-	line-height: 50px;
-}
-
-nav ul li a:hover {
-	color: grey;
-}
-
-nav ul li:hover ul {
-    display: block;
-    margin-left: 10px;
-}
-
-nav ul ul {
-	display: none;
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 99;
-	text-align: left;
-    border-top: 0;
-}
-
-nav ul ul li {
-    display: block;
-    margin-left: 0;
-}
-
-nav ul ul li a:hover {
-    color: blue;
-}
-
-.center-grey{
-       background:#f2f2f2;
-}
-
-.slide{
-	position: absolute;
-	top:50px;
-}
-
-.slide img {
-	width: 100%; 
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.leftArrow {
-	position: fixed;
-	top: 250px;
-	margin-left: 2%;
-	font-size: 40px;
-}
-
-.rightArrow {
-	position: fixed;
-	top: 250px;
-	margin-left: 96%;
-	font-size: 40px;
-}
-
-.arrowColour {
-	color: #C0C0C0;
-}
-
-.leftArrow a span {
-   visibility: hidden;
-}  
-
-.leftArrow:hover a span {
-   visibility: visible;
-}
-
-.rightArrow a span {
-   visibility: hidden;
-}  
-
-.rightArrow:hover a span {
-   visibility: visible;
-}
-
-.slide.ng-hide-add, .slide.ng-hide-remove {
-  -webkit-transition:all linear 0.5s;
-  -moz-transition:all linear 0.5s;
-  -o-transition:all linear 0.5s;
-  transition:all linear 0.5s;
-  display:block!important;
-}
- 
-.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
-  opacity:0;
-}
- 
-.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
-  opacity:1;
-}
-
 .loginWindow {
 	position:fixed;
 	height: 100%;
@@ -146,11 +22,6 @@ nav ul ul li a:hover {
 	 top:75px;
 	 width: 800px;
 	 margin-left: 80px;
-}
-
-.subMenuStyle {
-	color:#ffffff;
-	margin-left: 10px;
 }
 
 .btn.btn-primary.btn-signin {
@@ -181,15 +52,28 @@ nav ul ul li a:hover {
 }
 
 .subSection {
-	position: absolute;
+	position: relative;
+	top: 50px;
 	height: 200px;
 	width: 100%;
 	background-color: aqua;
+	float: left;
 }
 
 .subSection1 {
 	position: relative;
+	top: 50px;
 	height: 200px;
 	width: 100%;
 	background-color: red;
+	float: left;
+}
+
+.footer_home{
+	position: relative;
+  	top: 50px;
+  	height: 100px;
+  	background:rgba(0, 0, 0, 0.5);
+  	width: 100%;
+	float: left;
 }
