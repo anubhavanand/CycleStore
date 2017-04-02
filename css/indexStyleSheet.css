@@ -29,24 +29,6 @@ div.wrap {
 	float: right;
 }
 
-.container.innerContainer {
-    width: 960px;
-    background-color: #f2f2f2;
-    padding-top: 120px; /* Only to demonstrate */
-	border: black;
-}
-
-.bikeCategory {
-	position:fixed;
-	top:50px;
-	height: 60px;
-	background-color: #f2f2f2;
-	text-align: center;
-	width: 960px;
-	border: black;
-	z-index: 99;
-}
-
 .registrationWindow {
 	position:fixed;
 }

@@ -1,9 +1,11 @@
-<div>
-    <div class="bikeCategory" ng-show="ctrl.enableSearchPage">
+<div class="container searchContainer" ng-show="ctrl.enableSearchPage">
+    <div class="toppane">
         <H1>{{ctrl.searchCategory}}</H1>
     </div>
-
-    <div class="container innerContainer" ng-show="ctrl.enableSearchPage">
+    <div class="leftpane">
+        <h3>Filters</h3>
+    </div>
+    <div class="rightpane">
         <div class="row">
             <div class="col-xs-6 col-md-3" ng-repeat="bike in ctrl.bikes">
                 <a href="#" class="thumbnail">
@@ -15,4 +17,5 @@
             </div>
         </div>
     </div>
-</div><!--Search div End here   -->
+</div>
+<!--Search container div End here   -->
