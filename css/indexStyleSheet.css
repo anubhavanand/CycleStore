@@ -51,29 +51,30 @@ div.wrap {
 	position:fixed;
 }
 
-.subSection {
-	position: relative;
-	top: 50px;
-	height: 200px;
-	width: 100%;
-	background-color: aqua;
-	float: left;
-}
-
-.subSection1 {
-	position: relative;
-	top: 50px;
-	height: 200px;
-	width: 100%;
-	background-color: red;
-	float: left;
-}
-
 .footer_home{
 	position: relative;
   	top: 50px;
-  	height: 100px;
-  	background:rgba(0, 0, 0, 0.5);
+  	height: 200px;
+  	background:rgba(0, 0, 0, 0.7);
   	width: 100%;
 	float: left;
+}
+
+.heading {
+	font-size:1.20rem;
+	font-weight:500;
+	color: white;
+	margin-top: 25px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+.textStyling {
+	font-size:1.15rem;
+	font-weight:300;
+	color: white;
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: justify;
 }
