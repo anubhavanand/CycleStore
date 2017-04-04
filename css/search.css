@@ -18,6 +18,37 @@
     background-color: floralwhite;   
     border: dotted 1px lightgrey;
 }
+
+.breadcrumbback {
+    background:#a18c29;
+}
+.breadcrumb {
+  padding: 1px 3px 1px 4px;
+  margin-bottom: 0px;
+  list-style: none;
+  background-color: #5dc40d;
+  border-radius: 0px;
+  font-size:13px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > li a {
+  color:#fff;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #cccccc;
+  content: "/\00a0";
+}
+
+.breadcrumb > .active {
+  color:#000;
+}
+
 .toppane {
     margin-top: 50px;
     color: whitesmoke;

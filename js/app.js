@@ -1,4 +1,4 @@
-var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate', 'ngRoute', 'ngCookies']);
+var cycleStoreApp = angular.module('CycleStoreApp', ['ngAnimate', 'ngRoute', 'ngCookies', 'ngBreadCrumb']);
 
 cycleStoreApp.controller('CycleStoreController', CycleStoreController);
 
