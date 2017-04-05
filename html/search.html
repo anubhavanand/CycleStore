@@ -3,15 +3,36 @@
         <H1>{{ctrl.searchCategory}}</H1>
     </div>
     <div class="leftpane">
-        <h3>Filters</h3>
-        <div class="breadcrumb">
+        <h4>Filters</h4>
+        <!--div class="breadcrumb">
             <div style="float:left">
                 <i class="glyphicon glyphicon-home"></i>&nbsp;
             </div>
             <div>
                 <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="/html/ngBreadCrumbTemplate.html"></ui-breadcrumbs>
             </div>
-        </div>
+        </div-->
+        <label><input type="text" ng-model="search.name" placeholder="Search" />
+			</label>
+        <br/>
+        <br/>
+        <label>Filter by Gender
+            <ul>
+                <input type="radio" name="gender" value="male"> Male </input>
+                <br>
+                <input type="radio" name="gender" value="female"> Female </input>
+                <br>
+            </ul>
+        </label>
+        <br/>
+        <br/>
+        <label>Filter by Brand
+
+
+
+        </label>
+
+
     </div>
     <div class="rightpane">
         <div class="row">

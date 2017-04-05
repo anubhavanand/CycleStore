@@ -13,7 +13,7 @@
      * Config
      */
     var moduleName = 'ngBreadCrumb';
-    var templateUrl = 'ngBreadCrumbTemplate.html';
+    var templateUrl = '//html//ngBreadCrumbTemplate.html';
 
     /**
      * Module
