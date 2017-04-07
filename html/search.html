@@ -13,7 +13,7 @@
             </div>
         </div-->
         <label><input type="text" ng-model="search.name" placeholder="Search" />
-			</label>
+		</label>
         <br/>
         <br/>
         <label>Filter by Gender
@@ -28,15 +28,13 @@
         <br/>
         <label>Filter by Brand
 
-
-
         </label>
 
 
     </div>
     <div class="rightpane">
         <div class="row">
-            <div class="col-xs-6 col-md-3" ng-repeat="bike in ctrl.bikes">
+            <div class="col-xs-6 col-md-3" ng-repeat="bike in filtered = ctrl.bikes | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                 <a href="#" class="thumbnail">
                     <img ng-src="{{bike.picture.thumbnail}}" />
                 </a>
