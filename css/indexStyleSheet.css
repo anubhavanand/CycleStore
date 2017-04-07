@@ -43,7 +43,12 @@ div.wrap {
 }
 
 .footer_login{
-	top: 100px;
+	position: fixed;
+  	bottom: 0px;
+  	height: 200px;
+  	background:rgba(0, 0, 0, 0.7);
+  	width: 100%;
+	float: left;
 }
 
 .heading {
