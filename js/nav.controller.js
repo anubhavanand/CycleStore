@@ -18,12 +18,11 @@
 
         // create empty search model (object) to trigger $watch on update
         $scope.search = {};
-
+        $scope.genderFilter = [];
         $scope.resetFilters = function () {
             // needs to be a function or it won't trigger a $watch
             $scope.search = {};
         };
-
 
         self.showSearchPage = function (criteria) {
             //clear previous data before making a new search
@@ -67,6 +66,20 @@
                 $scope.currentPage = 1;
             }, true);
         }
+
+        $scope.selectMaleFemale = function (gender) {
+            alert(gender);
+            var i = $.inArray(gender, $scope.genderFilter);
+            if (i > -1) {
+                $scope.genderFilter.splice(i, 1);
+            } else {
+                $scope.genderFilter.push(gender);
+            }
+
+            angular.forEach($scope.genderFilter, function (value, index) {
+                alert(value);
+            });
+        };
     }
 
 })();

@@ -18,9 +18,9 @@
         <br/>
         <label>Filter by Gender
             <ul>
-                <input type="radio" name="gender" value="male"> Male </input>
+                <input type="checkbox" name="gender" value="male" ng-click="selectMaleFemale('male')"> Male/Unisex </input>
                 <br>
-                <input type="radio" name="gender" value="female"> Female </input>
+                <input type="checkbox" name="gender" value="female" ng-click="selectMaleFemale('female')"> Female </input>
                 <br>
             </ul>
         </label>
