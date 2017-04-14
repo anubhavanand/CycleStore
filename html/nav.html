@@ -1,11 +1,12 @@
 <div ng-controller="NavController as navCtrl">
 		<nav>
-			<ul>
+			<ul class="menu">
 				<li>
-					<a href="#" ng-click="ctrl.showHomePage()"><span class="glyphicon glyphicon-home"></span></a></li>
+					<a href="#" ng-click="ctrl.showHomePage()"><span class="glyphicon glyphicon-home"></span></a>
+				</li>
 				<li>
 					<a href="#">Bicycles</a>
-					<ul>
+					<ul class="subMenu">
 						<li><a href="#" ng-click="navCtrl.showSearchPage('roadbikes')">Road Bikes</a></li>
 						<li><a href="#" ng-click="navCtrl.showSearchPage('mountainbikes')">Mountain Bikes</a></li>
 						<li><a href="#" ng-click="navCtrl.showSearchPage('kidsbikes')">Kids Bikes</a></li>
@@ -15,8 +16,14 @@
 					</ul>
 				</li>
 				<li>
+					<a href="#">Components</a>
+				</li>
+				<li>
+					<a href="#">Tools & Maintainence</a>
+				</li>
+				<li>
 					<a href="#">Accessories</a>
-					<ul>
+					<ul class="subMenu">
 						<li><a href="#" ng-click="navCtrl.showSearchPage('bells&locks')">Bells & Locks</a></li>
 						<li><a href="#" ng-click="navCtrl.showSearchPage('helmets')">Helmets</a></li>
 						<li><a href="#" ng-click="navCtrl.showSearchPage('pumps')">Pumps</a></li>
@@ -24,12 +31,14 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#">Services</a></li>
+					<a href="#">Services</a>
+				</li>
 				<li>
-					<a href="#">Support</a></li>
+					<a href="#">Support</a>
+				</li>
 				<li>
 					<a href="#"><span class="glyphicon glyphicon-user"></span></a>
-					<ul>
+					<ul class="subMenu">
 						<li><span class="glyphicon glyphicon-briefcase subMenuStyle"></span><a href="#">Bag</a></li>
 						<li><span class="glyphicon glyphicon-heart subMenuStyle"></span><a href="#">Favourites</a></li>
 						<li><span class="glyphicon glyphicon-gift subMenuStyle"></span><a href="#">Orders</a></li>
@@ -37,6 +46,9 @@
 						<li ng-hide="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><a href="#" ng-click="ctrl.showLoginPage()">Sign In</a></li>
 						<li ng-show="ctrl.loginName"><span class="glyphicon glyphicon-user subMenuStyle"></span><span class="subMenuStyle">Hi {{ctrl.loginName}}!</span><a href="#" ng-click="ctrl.signOut()">Sign Out</a></li>
 					</ul>
+				</li>
+				<li class="searchAlignment">
+					<a href="#"><span class="glyphicon glyphicon-search"></span></a>
 				</li>
 			</ul>
 		</nav>
