@@ -48,6 +48,14 @@
                 $scope.$parent.ctrl.searchCategory = "Hybrid Bikes";
             } else if (criteria === 'vintagebikes') {
                 $scope.$parent.ctrl.searchCategory = "Vintage Bikes";
+            } else if (criteria === 'helmets') {
+                $scope.$parent.ctrl.searchCategory = "Helmets";
+            } else if (criteria === 'bells&locks') {
+                $scope.$parent.ctrl.searchCategory = "Bells & Locks";
+            } else if (criteria === 'pumps') {
+                $scope.$parent.ctrl.searchCategory = "Pumps";
+            } else if (criteria === 'tyres&tubes') {
+                $scope.$parent.ctrl.searchCategory = "Tyres & Tubes";
             }
         }
 
