@@ -2,6 +2,7 @@
   "roadbikes": [
     {
       "gender": "male",
+      "make": "Hero",
       "name": "Hero SuperStar 26T 18 Speed Dwrim Glsy - Black & Orange",
       "price": "Rs 23,500/-",
       "registered": "2016-02-21 21:33:29",
@@ -17,7 +18,8 @@
     },
     {
       "gender": "female",
-      "name": "Hero Marvel Avenger Youth Bike",
+      "make": "Atlas",
+      "name": "Atlas Marvel Avenger Youth Bike",
       "price": "Rs 13,500/-",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
@@ -32,7 +34,8 @@
     },
         {
       "gender": "male",
-      "name": "Hero Sprint 24T Fuel Single Speed Adult Cycle - Grey & Yellow",
+      "make": "BSA",
+      "name": "BSA Sprint 24T Fuel Single Speed Adult Cycle - Grey & Yellow",
       "price": "Rs 13,500/-",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
@@ -47,6 +50,7 @@
     },
         {
       "gender": "male",
+      "make": "UT",
       "name": "UT H1 26T 21 Speed Adult Cycle - Green ",
       "price": "Rs 13,500/-",
       "registered": "2016-02-21 21:33:29",
@@ -63,6 +67,7 @@
 
     {
       "gender": "male",
+      "make": "Hero",
       "name": "Hero Octane Mercury V1 21 Speed Gear Bicycle",
       "price": "Rs 13,500/-",
       "registered": "2016-02-21 21:33:29",

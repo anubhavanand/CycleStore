@@ -1,10 +1,12 @@
-<div class="container searchContainer" ng-show="ctrl.enableSearchPage">
-    <div class="toppane">
-        <H1>{{ctrl.searchCategory}}</H1>
-    </div>
-    <div class="leftpane">
-        <h4>Filters</h4>
-        <!--div class="breadcrumb">
+<div ng-controller="SearchController as searchCtrl">
+    <div class="container searchContainer" ng-show="ctrl.enableSearchPage">
+        <div class="toppane">
+            <H1>{{ctrl.searchCategory}}</H1>
+        </div>
+
+        <div class="leftpane">
+            <h4>Filters</h4>
+            <!--div class="breadcrumb">
             <div style="float:left">
                 <i class="glyphicon glyphicon-home"></i>&nbsp;
             </div>
@@ -12,35 +14,39 @@
                 <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="/html/ngBreadCrumbTemplate.html"></ui-breadcrumbs>
             </div>
         </div-->
-        <label><input type="text" ng-model="search.name" placeholder="Search" />
-		</label>
-        <br/>
-        <br/>
-        <label>Filter by Gender
+            <label><input type="text" ng-model="search.name" placeholder="Search" /></label>
+            <br/>
+            <br/>
+            <label>Filter by Gender
             <ul>
-                <input type="checkbox" name="gender" value="male" ng-click="selectMaleFemale('male')"> Male/Unisex </input>
+                <input type="checkbox" ng-click="search[1]" ng-true-value="male"  data-ng-false-value=''> Male/Unisex </input>
                 <br>
-                <input type="checkbox" name="gender" value="female" ng-click="selectMaleFemale('female')"> Female </input>
+                <input type="checkbox" ng-click="search[2]" ng-true-value="female"  data-ng-false-value=''> Female </input>
                 <br>
             </ul>
         </label>
-        <br/>
-        <br/>
-        <label>Filter by Brand
-
+            <br/>
+            <br/>
+            <label>Filter by Brand
+            <br/>
+            <div ng-repeat="m in ctrl.brands">
+                <b><input type="checkbox" ng-model="useMakes[$index]"/>{{m}}</b>
+                <br/>
+            </div>
+            
         </label>
-
-
-    </div>
-    <div class="rightpane">
-        <div class="row">
-            <div class="col-xs-6 col-md-3" ng-repeat="bike in filtered = ctrl.bikes | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                <a href="#" class="thumbnail">
-                    <img ng-src="{{bike.picture.thumbnail}}" />
-                </a>
-                <a href="#">{{bike.name}}
+        </div>
+        <!-- Left Pane Closing DIV-->
+        <div class="rightpane">
+            <div class="row">
+                <div class="col-xs-6 col-md-3" ng-repeat="bike in filtered = ctrl.bikes | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                    <a href="#" class="thumbnail">
+                        <img ng-src="{{bike.picture.thumbnail}}" />
+                    </a>
+                    <a href="#">{{bike.name}}
 							<p>Price {{bike.price}}</p>
 			</a>
+                </div>
             </div>
         </div>
     </div>
