@@ -45,7 +45,6 @@
                 angular.forEach(self.tempFilteredData, function (value, index) {
                     var i = $scope.filtered.indexOf(value);
                     if (i < 0) {
-                        alert(value.make);
                         $scope.filtered.push(value);
                     } 
                 });
