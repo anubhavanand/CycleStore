@@ -1,22 +1,22 @@
 <div ng-controller="HomeController as homeCtrl">
 	<div ng-show="ctrl.showImage">
-	  	<div class="slide" ng-repeat="image in homeCtrl.images" ng-show="image.visible">
-	    	<img class="sliderImage" ng-src="../images/{{image.src}}" />
-	  	</div>
-	  	<div class="slideCover">
-	    	<img class="sliderImage" ng-src="../images/image1.jpg" />
-	  	</div>
+		<div class="slide" ng-repeat="image in homeCtrl.images" ng-show="image.visible">
+			<img class="sliderImage" ng-src="../images/{{image.src}}" />
+		</div>
+		<div class="slideCover">
+			<img class="sliderImage" ng-src="../images/image1.jpg" />
+		</div>
 		<div class="leftArrow">
 			<a href="#" ng-click="homeCtrl.prev()">
-			<span class="glyphicon glyphicon-menu-left arrowColour"></span>
-			</a>
-	  	</div>
-		<div class="rightArrow">
-			<a href="#" ng-click="homeCtrl.next()">
-			<span class="glyphicon glyphicon-menu-right arrowColour"></span>
+				<span class="glyphicon glyphicon-menu-left arrowColour"></span>
 			</a>
 		</div>
-	  	<div class="bannerContainer">
+		<div class="rightArrow">
+			<a href="#" ng-click="homeCtrl.next()">
+				<span class="glyphicon glyphicon-menu-right arrowColour"></span>
+			</a>
+		</div>
+		<div class="bannerContainer">
 			<div class="photobanner">
 				<img class="first" src="images/banner/image1.jpg" alt="" />
 				<img src="images/banner/image2.jpg" alt="" />
@@ -29,9 +29,9 @@
 				<img src="images/banner/image9.jpg" alt="" />
 				<img src="images/banner/image10.jpg" alt="" />
 			</div>
-	  	</div>
-	  	<div class="footer_home">    
-        	<div ng-include="'html/footer.html'"></div>
-    	</div>
+		</div>
+		<div class="footer_home">
+			<div ng-include="'html/footer.html'"></div>
+		</div>
 	</div>
-</div> 
+</div>

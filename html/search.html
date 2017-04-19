@@ -1,4 +1,4 @@
-<div ng-controller="SearchController as searchCtrl">
+<!--div ng-controller="SearchController as searchCtrl"-->
     <div class="container searchContainer" ng-show="ctrl.enableSearchPage">
         <div class="toppane">
             <H1>{{ctrl.searchCategory}}</H1>
@@ -19,9 +19,9 @@
             <br/>
             <label>Filter by Gender
             <ul>
-                <input type="checkbox" ng-click="search[1]" ng-true-value="male"  data-ng-false-value=''> Male/Unisex </input>
+                <input type="checkbox" ng-click="navCtrl.filterMaleFemale('male')"> Male/Unisex </input>
                 <br>
-                <input type="checkbox" ng-click="search[2]" ng-true-value="female"  data-ng-false-value=''> Female </input>
+                <input type="checkbox" ng-click="navCtrl.filterMaleFemale('female')"> Female </input>
                 <br>
             </ul>
         </label>
@@ -50,5 +50,5 @@
             </div>
         </div>
     </div>
-</div>
+
 <!--Search container div End here   -->
