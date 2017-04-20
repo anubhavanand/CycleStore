@@ -14,6 +14,7 @@
     cycleStoreApp.controller('NavController', NavController);
     function NavController(SearchDataSvc, $scope, filterFilter) {
         var self = this;
+        self.unfilteredData = [];
 
         self.showSearchPage = function (criteria) {
             //clear previous data before making a new search
@@ -23,6 +24,7 @@
             $scope.$parent.ctrl.showSearchPage();
             var promise = SearchDataSvc.getBikes(criteria);
             promise.then(function (data) {
+                self.unfilteredData = data;
                 $scope.$parent.ctrl.bikes = data;
                 angular.forEach(data, function (value, index) {
                     var i = $scope.$parent.ctrl.brands.indexOf(value.make);
@@ -102,6 +104,20 @@
             } else {
                 self.genderFilter.push(gender);
             }
+            if (self.genderFilter.length === 1) {
+                angular.forEach(self.genderFilter, function (genderData, index) {
+                    $scope.$parent.ctrl.bikes = self.unfilteredData.filter(function (data) {
+                        return data.gender === genderData;
+                    });
+                });
+
+            } else {
+                $scope.$parent.ctrl.bikes = self.unfilteredData;
+            }
+
+
+
+
         }
 
     }
