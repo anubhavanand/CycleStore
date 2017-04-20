@@ -19,9 +19,9 @@
             <br/>
             <label>Filter by Gender
             <ul>
-                <input type="checkbox" ng-click="navCtrl.filterMaleFemale('male')"> Male/Unisex </input>
+                <input type="checkbox" ng-click="navCtrl.filterData('male', 'gender')"> Male/Unisex </input>
                 <br>
-                <input type="checkbox" ng-click="navCtrl.filterMaleFemale('female')"> Female </input>
+                <input type="checkbox" ng-click="navCtrl.filterData('female', 'gender')"> Female </input>
                 <br>
             </ul>
         </label>
@@ -30,7 +30,7 @@
             <label>Filter by Brand
             <br/>
             <div ng-repeat="m in ctrl.brands">
-                <b><input type="checkbox" ng-model="useMakes[$index]"/>{{m}}</b>
+                <b><input type="checkbox" ng-click="navCtrl.filterData(m, 'brands')"/>{{m}}</b>
                 <br/>
             </div>
             

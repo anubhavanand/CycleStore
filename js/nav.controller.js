@@ -64,7 +64,7 @@
         // create empty search model (object) to trigger $watch on update
         self.search = {};
 
-        self.genderFilter = [];
+        self.filters = [];
 
         self.filtered = [];
 
@@ -97,23 +97,33 @@
             }, true);
         }
 
-        self.filterMaleFemale = function (gender) {
-            var i = self.genderFilter.indexOf(gender);
+        self.filterData = function (filterToApply, filterType) {
+            self.tempList = [];
+            var i = self.filters.indexOf(filterToApply);
             if (i > -1) {
-                self.genderFilter.splice(i, 1);
+                self.filters.splice(i, 1);
             } else {
-                self.genderFilter.push(gender);
+                self.filters.push(filterToApply);
             }
-            if (self.genderFilter.length === 1) {
-                angular.forEach(self.genderFilter, function (genderData, index) {
-                    $scope.$parent.ctrl.bikes = self.unfilteredData.filter(function (data) {
-                        return data.gender === genderData;
-                    });
-                });
+            angular.forEach(self.filters, function (filterValue, index) {
+                self.tempList.push.apply(self.tempList, self.unfilteredData.filter(function (data) {
+                    if (filterType === 'gender') {
+                        return data.gender === filterValue;
+                    } else if (filterType === 'brands') {
+                        return data.make === filterValue;
+                    } else {
+                        return false;
+                    }
 
-            } else {
+                }));
+            });
+            if (self.filters.length === 0) {
                 $scope.$parent.ctrl.bikes = self.unfilteredData;
+            } else {
+                $scope.$parent.ctrl.bikes = self.tempList;
             }
+
+
 
 
 
