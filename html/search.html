@@ -1,7 +1,7 @@
 <!--div ng-controller="SearchController as searchCtrl"-->
     <div class="container searchContainer" ng-show="ctrl.enableSearchPage">
         <div class="toppane">
-            <H1>{{ctrl.searchCategory}}</H1>
+            <H1>{{navCtrl.searchCategory}}</H1>
         </div>
 
         <div class="leftpane">
@@ -29,7 +29,7 @@
             <br/>
             <label>Filter by Brand
             <br/>
-            <div ng-repeat="m in ctrl.brands">
+            <div ng-repeat="m in navCtrl.brands">
                 <b><input type="checkbox" ng-click="navCtrl.filterData(m, 'brands')"/>{{m}}</b>
                 <br/>
             </div>
@@ -39,12 +39,12 @@
         <!-- Left Pane Closing DIV-->
         <div class="rightpane">
             <div class="row">
-                <div class="col-xs-6 col-md-3" ng-repeat="bike in filtered = ctrl.bikes | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                <div class="col-xs-6 col-md-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                     <a href="#" class="thumbnail">
-                        <img ng-src="{{bike.picture.thumbnail}}" />
+                        <img ng-src="{{record.picture.thumbnail}}" />
                     </a>
-                    <a href="#">{{bike.name}}
-							<p>Price {{bike.price}}</p>
+                    <a href="#">{{record.name}}
+							<p>Price {{record.price}}</p>
 			</a>
                 </div>
             </div>

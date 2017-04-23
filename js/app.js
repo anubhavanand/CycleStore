@@ -4,8 +4,6 @@ cycleStoreApp.controller('CycleStoreController', CycleStoreController);
 
 function CycleStoreController($rootScope, $cookies, $http) {
     var self = this;
-
-    //this.images = SliderImageSvc.images;
     this.signOut = signOut;
 
     $rootScope.globals = $cookies.getObject('globals') || {};

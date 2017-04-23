@@ -15,21 +15,22 @@
     function NavController(SearchDataSvc, $scope, filterFilter) {
         var self = this;
         self.unfilteredData = [];
-
+        self.searchedData = [];
+        self.brands = [];
         self.showSearchPage = function (criteria) {
             //clear previous data before making a new search
-            $scope.$parent.ctrl.bikes = [];
-            $scope.$parent.ctrl.brands = [];
+            self.searchedData = [];
+            self.brands = [];
             self.setSearchedBanner(criteria);
             $scope.$parent.ctrl.showSearchPage();
-            var promise = SearchDataSvc.getBikes(criteria);
+            var promise = SearchDataSvc.getSearchedData(criteria);
             promise.then(function (data) {
                 self.unfilteredData = data;
-                $scope.$parent.ctrl.bikes = data;
+                self.searchedData = data;
                 angular.forEach(data, function (value, index) {
-                    var i = $scope.$parent.ctrl.brands.indexOf(value.make);
+                    var i = self.brands.indexOf(value.make);
                     if (i < 0) {
-                        $scope.$parent.ctrl.brands.push(value.make);
+                        self.brands.push(value.make);
                     }
                 });
                 self.startFiltering();
@@ -37,25 +38,25 @@
         }
         self.setSearchedBanner = function (criteria) {
             if (criteria === 'roadbikes') {
-                $scope.$parent.ctrl.searchCategory = "Road Bikes";
+                self.searchCategory = "Road Bikes";
             } else if (criteria === 'mountainbikes') {
-                $scope.$parent.ctrl.searchCategory = "Mountain Bikes";
+                self.searchCategory = "Mountain Bikes";
             } else if (criteria === 'kidsbikes') {
-                $scope.$parent.ctrl.searchCategory = "Kids Bikes";
+                self.searchCategory = "Kids Bikes";
             } else if (criteria === 'bmxbikes') {
-                $scope.$parent.ctrl.searchCategory = "BMX Bikes";
+                self.searchCategory = "BMX Bikes";
             } else if (criteria === 'hybridbikes') {
-                $scope.$parent.ctrl.searchCategory = "Hybrid Bikes";
+                self.searchCategory = "Hybrid Bikes";
             } else if (criteria === 'vintagebikes') {
-                $scope.$parent.ctrl.searchCategory = "Vintage Bikes";
+                self.searchCategory = "Vintage Bikes";
             } else if (criteria === 'helmets') {
-                $scope.$parent.ctrl.searchCategory = "Helmets";
+                self.searchCategory = "Helmets";
             } else if (criteria === 'bells&locks') {
-                $scope.$parent.ctrl.searchCategory = "Bells & Locks";
+                self.searchCategory = "Bells & Locks";
             } else if (criteria === 'pumps') {
-                $scope.$parent.ctrl.searchCategory = "Pumps";
+                self.searchCategory = "Pumps";
             } else if (criteria === 'tyres&tubes') {
-                $scope.$parent.ctrl.searchCategory = "Tyres & Tubes";
+                self.searchCategory = "Tyres & Tubes";
             }
         }
 
@@ -77,13 +78,13 @@
         self.startFiltering = function () {
             // pagination controls
             // $scope.currentPage = 1;
-            // $scope.totalItems = $scope.$parent.ctrl.bikes.length;
+            // $scope.totalItems = self.length;
             // $scope.entryLimit = 4; // items per page
             // $scope.noOfPages = Math.ceil($scope.totalItems / $scope.entryLimit);
             // $scope.filtered = [];
             // $watch search to update pagination
             $scope.$watch('search', function (newVal, oldVal) {
-                self.tempFilteredData = filterFilter($scope.$parent.ctrl.bikes, newVal);
+                self.tempFilteredData = filterFilter(self.searchedData, newVal);
                 angular.forEach(self.tempFilteredData, function (value, index) {
                     var i = self.filtered.indexOf(value);
                     if (i < 0) {
@@ -96,7 +97,6 @@
                 // $scope.currentPage = 1;
             }, true);
         }
-
         self.filterData = function (filterToApply, filterType) {
             self.tempList = [];
             var i = self.filters.indexOf(filterToApply);
@@ -118,18 +118,11 @@
                 }));
             });
             if (self.filters.length === 0) {
-                $scope.$parent.ctrl.bikes = self.unfilteredData;
+                self.searchedData = self.unfilteredData;
             } else {
-                $scope.$parent.ctrl.bikes = self.tempList;
+                self.searchedData = self.tempList;
             }
-
-
-
-
-
-
         }
-
     }
 
 })();
