@@ -5,6 +5,7 @@
       "make": "Hero",
       "name": "Hero SuperStar 26T 18 Speed Dwrim Glsy - Black & Orange",
       "price": "Rs 23,500/-",
+      "offer": "20% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
       "cell": "0483-059-005",
@@ -21,6 +22,7 @@
       "make": "Atlas",
       "name": "Atlas Marvel Avenger Youth Bike",
       "price": "Rs 13,500/-",
+      "offer": "Buy 2 Get 10% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
       "cell": "0483-059-005",
@@ -32,11 +34,12 @@
       },
       "nat": "AU"
     },
-        {
+    {
       "gender": "male",
       "make": "BSA",
       "name": "BSA Sprint 24T Fuel Single Speed Adult Cycle - Grey & Yellow",
       "price": "Rs 13,500/-",
+      "offer": "",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
       "cell": "0483-059-005",
@@ -48,11 +51,12 @@
       },
       "nat": "AU"
     },
-        {
+    {
       "gender": "male",
       "make": "UT",
       "name": "UT H1 26T 21 Speed Adult Cycle - Green ",
       "price": "Rs 13,500/-",
+      "offer": "10% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
       "cell": "0483-059-005",
@@ -64,12 +68,12 @@
       },
       "nat": "AU"
     },
-
     {
       "gender": "male",
       "make": "Hero",
       "name": "Hero Octane Mercury V1 21 Speed Gear Bicycle",
       "price": "Rs 13,500/-",
+      "offer": "50% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
       "cell": "0483-059-005",
@@ -82,11 +86,11 @@
       "nat": "AU"
     }
   ],
-
-   "helmets": [
+  "helmets": [
     {
       "name": "Btwin Bike Helmet 500 Black",
       "price": "Rs 2240/-",
+      "offer": "5% Discount",
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/8/3/8328686-2.jpg?t=1448526733",
@@ -95,10 +99,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Bike Helmet 500 - Orange",
       "price": "Rs 2599/-",
+      "offer": "5% Discount",
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/8/3/8328687_1.jpg?t=1448526733",
@@ -107,10 +111,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Btwin Kiddy Helmet Blue",
       "price": "Rs 899/-",
+      "offer": "5% Discount",
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbb0198_1.jpg?t=1448526733",
@@ -119,12 +123,12 @@
       },
       "nat": "AU"
     }
-   ],
-
-   "tyres&tubes": [
+  ],
+  "tyres&tubes": [
     {
       "name": "Btwin Sport 24X200 Black",
       "price": "Rs 253/-",
+      "offer": "5% Discount",
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbe0755_2_1.jpg?t=1448526733",
@@ -133,10 +137,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Btwin Tube 26X1722 Schrader",
       "price": "Rs 194/-",
+      "offer": "5% Discount",
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbe1132_2.jpg?t=1448526733",
@@ -145,10 +149,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Btwin 500 Mountain Bike Tyre 26X2.00 - Black",
       "price": "Rs 799/-",
+      "offer": "5% Discount",
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/y/cytum004_1.jpg?t=1448526733",
@@ -157,10 +161,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Maxxis Tube - 700X18/25C (Mx/Sv-48)",
       "price": "Rs 600/-",
+      "offer": "5% Discount",
       "id": 4,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/y/cytum004_1.jpg?t=1448526733",
@@ -169,13 +173,12 @@
       },
       "nat": "AU"
     }
-
-   ],
-
-   "pumps": [
+  ],
+  "pumps": [
     {
       "name": "Gol Bicycle Multitool Kit + Gol Bicycle Air Pump",
       "price": "Rs 299/-",
+      "offer": "5% Discount",
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/y/cyccombo1_c1.jpg?t=1448526733",
@@ -184,10 +187,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Gol Bicycle Air Pump",
       "price": "Rs 180/-",
+      "offer": "5% Discount",
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golhandpu01_c1.jpg?t=1448526733",
@@ -196,10 +199,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Btwin Mnp 500 Hand pump",
       "price": "Rs 480/-",
+      "offer": "5% Discount",
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbe0224_1.jpg?t=1448526733",
@@ -208,10 +211,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Btwin Foot Pump 520",
       "price": "Rs 974/-",
+      "offer": "5% Discount",
       "id": 4,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/1/8/1829305.jpg?t=1448526733",
@@ -220,13 +223,12 @@
       },
       "nat": "AU"
     }
-
-   ],
-
-   "bells&locks": [
+  ],
+  "bells&locks": [
     {
       "name": "Gol Bicycle Bell - Blue",
       "price": "Rs 100/-",
+      "offer": "5% Discount",
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcyclebellbl01_c1.jpg?t=1448526733",
@@ -235,10 +237,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Gol Bicycle Bell - Black",
       "price": "Rs 100/-",
+      "offer": "",
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcyclebellbk01_c1.jpg?t=1448526733",
@@ -247,10 +249,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Gol Bicycle Cable Lock - Blue",
       "price": "Rs 120/-",
+      "offer": "5% Discount",
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcomblckbl01_c1.jpg?t=1448526733",
@@ -259,10 +261,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Gol Bicycle Cable Lock - Red",
       "price": "Rs 120/-",
+      "offer": "5% Discount",
       "id": 4,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcomblckrd01_c1.jpg?t=1448526733",
@@ -271,10 +273,10 @@
       },
       "nat": "AU"
     },
-
     {
       "name": "Gol Bicycle Cable Lock - Red",
       "price": "Rs 120/-",
+      "offer": "5% Discount",
       "id": 5,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/i/m/img_2364_1.jpg?t=1448526733",
@@ -283,16 +285,14 @@
       },
       "nat": "AU"
     }
-
-   ],
-
+  ],
   "users": [
-      {
+    {
       "id": "98",
       "email": "anubhavanand85@gmail.com",
       "mobileNumber": {
-          "countryCode": "+91",
-          "number": "9871704483"
+        "countryCode": "+91",
+        "number": "9871704483"
       },
       "name": {
         "firstName": "Anubhav",
@@ -301,6 +301,16 @@
       },
       "gender": "M",
       "password": "123"
+    },
+    {
+      "id": "9891068348",
+      "email": "gauravv.pandeyy@gmail.com",
+      "mobileNumber": "9891068348",
+      "password": "monu123",
+      "name": {
+        "firstName": "gaurav",
+        "lastName": "pandey"
+      }
     }
   ]
 }

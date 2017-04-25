@@ -19,9 +19,23 @@
     border: dotted 1px lightgrey;
 }
 
+strong > a > p{
+  color: black;
+  text-align: center;
+}
+
+.promotion{
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: black;
+  text-align: center;
+  color: yellow;
+}
+
 label {
   width: 100%;
   border: dotted 1px lightgrey;
+  text-align: start;
 }
 
 

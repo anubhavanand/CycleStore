@@ -1,12 +1,12 @@
 <!--div ng-controller="SearchController as searchCtrl"-->
-    <div class="container searchContainer" ng-show="ctrl.enableSearchPage">
-        <div class="toppane">
-            <H1>{{navCtrl.searchCategory}}</H1>
-        </div>
+<div class="container searchContainer" ng-show="ctrl.enableSearchPage">
+    <div class="toppane">
+        <H1>{{navCtrl.searchCategory}}</H1>
+    </div>
 
-        <div class="leftpane">
-            <h4>Filters</h4>
-            <!--div class="breadcrumb">
+    <div class="leftpane">
+        <h4>Filters</h4>
+        <!--div class="breadcrumb">
             <div style="float:left">
                 <i class="glyphicon glyphicon-home"></i>&nbsp;
             </div>
@@ -14,41 +14,45 @@
                 <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="/html/ngBreadCrumbTemplate.html"></ui-breadcrumbs>
             </div>
         </div-->
-            <label><input type="text" ng-model="search.name" placeholder="Search" /></label>
-            <br/>
-            <br/>
-            <label>Filter by Gender
-            <ul>
+        <label><input type="text" ng-model="search.name" placeholder="Search" /></label>
+        <br/>
+        <br/>
+        <label>Filter by Gender
+                <br>
                 <input type="checkbox" ng-click="navCtrl.filterData('male', 'gender')"> Male/Unisex </input>
                 <br>
                 <input type="checkbox" ng-click="navCtrl.filterData('female', 'gender')"> Female </input>
                 <br>
-            </ul>
         </label>
-            <br/>
-            <br/>
-            <label>Filter by Brand
+        <br/>
+        <br/>
+        <label>Filter by Brand
             <br/>
             <div ng-repeat="m in navCtrl.brands">
-                <b><input type="checkbox" ng-click="navCtrl.filterData(m, 'brands')"/>{{m}}</b>
+                <b><input type="checkbox" ng-click="navCtrl.filterData(m, 'brands')"/> {{m}}</b>
                 <br/>
             </div>
-            
         </label>
-        </div>
-        <!-- Left Pane Closing DIV-->
-        <div class="rightpane">
-            <div class="row">
-                <div class="col-xs-6 col-md-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                    <a href="#" class="thumbnail">
-                        <img ng-src="{{record.picture.thumbnail}}" />
+    </div>
+    <!-- Left Pane Closing DIV-->
+    <div class="rightpane">
+        <div class="row">
+            <div class="col-xs-6 col-md-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                <a href="#" class="thumbnail">
+                    <img ng-src="{{record.picture.thumbnail}}" />
+                </a>
+                <strong>
+                    <a href="#"> 
+                        <p>{{record.name}}</p>
+                        <p>Price {{record.price}}</p>
+                        <div class="promotion">
+                            {{record.offer}}
+                        <div>
                     </a>
-                    <a href="#">{{record.name}}
-							<p>Price {{record.price}}</p>
-			</a>
-                </div>
+                </strong>
             </div>
         </div>
     </div>
+</div>
 
 <!--Search container div End here   -->
