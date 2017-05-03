@@ -123,6 +123,13 @@
                 self.searchedData = self.tempList;
             }
         }
+
+        self.showProductDetailPage = function (product) {
+            //clear previous data before making a new search
+            self.productDetail = {};
+            self.productDetail = product;
+            $scope.$parent.ctrl.showProductDetailPage();
+        }
     }
 
 })();

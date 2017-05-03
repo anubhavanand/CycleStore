@@ -37,12 +37,12 @@
     <!-- Left Pane Closing DIV-->
     <div class="rightpane">
         <div class="row">
-            <div class="col-xs-6 col-md-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                <a href="#" class="thumbnail">
+            <div class="col-xs-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                <a href="#" class="thumbnail" ng-click="navCtrl.showProductDetailPage(record)">
                     <img ng-src="{{record.picture.thumbnail}}" />
                 </a>
                 <strong>
-                    <a href="#"> 
+                    <a href="#" ng-click="navCtrl.showProductDetailPage(record)"> 
                         <p>{{record.name}}</p>
                         <p>Price {{record.price}}</p>
                         <div class="promotion">

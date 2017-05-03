@@ -18,6 +18,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
     this.enableLoginPage = false;
     this.enableRegistrationPage = false;
     this.registrationSuccess = false;
+    this.enableProductDetailPage = false;
 
     this.showHomePage = function () {
         this.enableSearchPage = false;
@@ -25,6 +26,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.showImage = true;
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
+        this.enableProductDetailPage = false;
     }
 
     this.showLoginPage = function () {
@@ -33,6 +35,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableLoginPage = true;
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
+        this.enableProductDetailPage = false;
     }
 
     this.showRegistrationPage = function () {
@@ -41,6 +44,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableLoginPage = false;
         this.enableRegistrationPage = true;
         this.registrationSuccess = false;
+        this.enableProductDetailPage = false;
     }
 
     this.showSearchPage = function () {
@@ -49,6 +53,16 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableLoginPage = false;
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
+        this.enableProductDetailPage = false;
+    }
+
+    this.showProductDetailPage = function () {
+        this.showImage = false;
+        this.enableSearchPage = false;
+        this.enableLoginPage = false;
+        this.enableRegistrationPage = false;
+        this.registrationSuccess = false;
+        this.enableProductDetailPage = true;
     }
 
     function signOut() {
