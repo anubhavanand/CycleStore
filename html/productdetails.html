@@ -1,0 +1,28 @@
+<div ng-show="ctrl.enableProductDetailPage">
+    <div class="productDetailSection">
+        <p class="text-info">
+            <img ng-src="{{navCtrl.productDetail.picture.medium}}" alt="{{navCtrl.productDetail.name}}" class="img-responsive"/> {{navCtrl.productDetail.description}}
+            <br />
+        </p>
+    </div>
+
+    <!-- buttons -->
+    <div class="cartSection">
+        <h4>{{navCtrl.productDetail.category}}</h4>
+        <h3>{{navCtrl.productDetail.name}}</h3>
+        <br/>
+        <h4>Price</h4>
+        <h3><s>navCtrl.showformatedPrice(navCtrl.productDetail.price)</s></h3>
+        <h4>Now</h4>
+        <h3>{{navCtrl.productDetail.price}}*1-{{navCtrl.productDetail.discount}}/100</h3>
+        <button class="btn btn-block btn-success" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                <i class="icon-shopping-cart icon-white" /> add to cart
+            </button>
+        <button class="btn btn-block btn-danger" ng-click="cart.addItem(product.sku, product.name, product.price, -10000)" ng-disabled="cart.getTotalCount(product.sku) < 1">
+                <i class="icon-trash icon-white" /> remove from cart
+            </button>
+        <button class="btn btn-block" onclick="window.location.href=''">
+                <i class="icon-chevron-left" /> back to store
+            </button>
+    </div>
+</div>

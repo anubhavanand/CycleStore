@@ -1,0 +1,24 @@
+.productDetailSection {
+    margin-top: 100px;
+    width: 60%;
+    float: left;
+}
+
+.cartSection {
+    margin-top: 100px;
+    margin-right: 5%;
+    width: 30%;
+    float: right;
+}
+
+.cartSection h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+}
+
+.cartSection h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkgrey;
+}
+
+

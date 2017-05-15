@@ -130,6 +130,11 @@
             self.productDetail = product;
             $scope.$parent.ctrl.showProductDetailPage();
         }
+
+        self.showformatedPrice = function (price) {
+            formattedPrice = (price).replaceAll(("(?<=\d)(?=(\d\d\d)+(?!\d))"),",");
+            return formattedPrice;
+        }
     }
 
 })();

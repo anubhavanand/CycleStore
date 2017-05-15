@@ -2,9 +2,11 @@
   "roadbikes": [
     {
       "gender": "male",
+      "category": "Road bike",
       "make": "Hero",
       "name": "Hero SuperStar 26T 18 Speed Dwrim Glsy - Black & Orange",
-      "price": "Rs 23,500/-",
+      "price": 23500,
+      "discount": 20,
       "offer": "20% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
@@ -19,9 +21,11 @@
     },
     {
       "gender": "female",
+      "category": "Road bike",
       "make": "Atlas",
       "name": "Atlas Marvel Avenger Youth Bike",
-      "price": "Rs 13,500/-",
+      "price": 13500,
+      "discount": 10,
       "offer": "Buy 2 Get 10% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
@@ -36,10 +40,12 @@
     },
     {
       "gender": "male",
+      "category": "Road bike",
       "make": "BSA",
       "name": "BSA Sprint 24T Fuel Single Speed Adult Cycle - Grey & Yellow",
-      "price": "Rs 13,500/-",
+      "price": 13500,
       "offer": "",
+      "discount": 0,
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
       "cell": "0483-059-005",
@@ -53,9 +59,11 @@
     },
     {
       "gender": "male",
+      "category": "Road bike",
       "make": "UT",
       "name": "UT H1 26T 21 Speed Adult Cycle - Green ",
-      "price": "Rs 13,500/-",
+      "price": 13500,
+      "discount": 10,
       "offer": "10% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
@@ -70,9 +78,11 @@
     },
     {
       "gender": "male",
+      "category": "Road bike",
       "make": "Hero",
       "name": "Hero Octane Mercury V1 21 Speed Gear Bicycle",
-      "price": "Rs 13,500/-",
+      "price": 13500,
+      "discount": 50,
       "offer": "50% Discount",
       "registered": "2016-02-21 21:33:29",
       "phone": "02-2217-5264",
@@ -89,7 +99,9 @@
   "helmets": [
     {
       "name": "Btwin Bike Helmet 500 Black",
-      "price": "Rs 2240/-",
+      "category": "Helmet",
+      "price": 2240,
+      "discount": 5,
       "offer": "5% Discount",
       "id": 1,
       "picture": {
@@ -101,8 +113,10 @@
     },
     {
       "name": "Bike Helmet 500 - Orange",
-      "price": "Rs 2599/-",
+      "category": "Helmet",
+      "price": 2599,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/8/3/8328687_1.jpg?t=1448526733",
@@ -113,8 +127,10 @@
     },
     {
       "name": "Btwin Kiddy Helmet Blue",
-      "price": "Rs 899/-",
+      "category": "Helmet",
+      "price": 899,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbb0198_1.jpg?t=1448526733",
@@ -127,8 +143,10 @@
   "tyres&tubes": [
     {
       "name": "Btwin Sport 24X200 Black",
-      "price": "Rs 253/-",
+      "category": "Tyre & Tube",
+      "price": 253,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbe0755_2_1.jpg?t=1448526733",
@@ -139,8 +157,10 @@
     },
     {
       "name": "Btwin Tube 26X1722 Schrader",
-      "price": "Rs 194/-",
+      "category": "Tyre & Tube",
+      "price": 194,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbe1132_2.jpg?t=1448526733",
@@ -151,8 +171,10 @@
     },
     {
       "name": "Btwin 500 Mountain Bike Tyre 26X2.00 - Black",
-      "price": "Rs 799/-",
+      "category": "Tyre & Tube",
+      "price": 799,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/y/cytum004_1.jpg?t=1448526733",
@@ -163,8 +185,10 @@
     },
     {
       "name": "Maxxis Tube - 700X18/25C (Mx/Sv-48)",
-      "price": "Rs 600/-",
+      "category": "Tyre & Tube",
+      "price": 600,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 4,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/y/cytum004_1.jpg?t=1448526733",
@@ -177,8 +201,10 @@
   "pumps": [
     {
       "name": "Gol Bicycle Multitool Kit + Gol Bicycle Air Pump",
-      "price": "Rs 299/-",
+      "category": "Pump",
+      "price": 299,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/y/cyccombo1_c1.jpg?t=1448526733",
@@ -189,8 +215,10 @@
     },
     {
       "name": "Gol Bicycle Air Pump",
-      "price": "Rs 180/-",
+      "price": 180,
+      "category": "Pump",
       "offer": "5% Discount",
+      "discount": 5,
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golhandpu01_c1.jpg?t=1448526733",
@@ -201,8 +229,10 @@
     },
     {
       "name": "Btwin Mnp 500 Hand pump",
-      "price": "Rs 480/-",
+      "category": "Pump",
+      "price": 480,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/b/gbe0224_1.jpg?t=1448526733",
@@ -213,8 +243,10 @@
     },
     {
       "name": "Btwin Foot Pump 520",
-      "price": "Rs 974/-",
+      "category": "Pump",
+      "price": 974,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 4,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/1/8/1829305.jpg?t=1448526733",
@@ -227,8 +259,10 @@
   "bells&locks": [
     {
       "name": "Gol Bicycle Bell - Blue",
-      "price": "Rs 100/-",
+      "category": "Bells & Locks",
+      "price": 100,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 1,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcyclebellbl01_c1.jpg?t=1448526733",
@@ -239,8 +273,10 @@
     },
     {
       "name": "Gol Bicycle Bell - Black",
-      "price": "Rs 100/-",
+      "category": "Bells & Locks",
+      "price": 100,
       "offer": "",
+      "discount": 0,
       "id": 2,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcyclebellbk01_c1.jpg?t=1448526733",
@@ -251,8 +287,10 @@
     },
     {
       "name": "Gol Bicycle Cable Lock - Blue",
-      "price": "Rs 120/-",
+      "category": "Bells & Locks",
+      "price": 120,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 3,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcomblckbl01_c1.jpg?t=1448526733",
@@ -263,8 +301,10 @@
     },
     {
       "name": "Gol Bicycle Cable Lock - Red",
-      "price": "Rs 120/-",
+      "category": "Bells & Locks",
+      "price": 120,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 4,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/golcomblckrd01_c1.jpg?t=1448526733",
@@ -275,8 +315,10 @@
     },
     {
       "name": "Gol Bicycle Cable Lock - Red",
-      "price": "Rs 120/-",
+      "category": "Bells & Locks",
+      "price": 120,
       "offer": "5% Discount",
+      "discount": 5,
       "id": 5,
       "picture": {
         "large": "https://www.cyclinghub.in/media/catalog/product/cache/6/image/450x450/9df78eab33525d08d6e5fb8d27136e95/i/m/img_2364_1.jpg?t=1448526733",
