@@ -135,6 +135,10 @@
             formattedPrice = (price).replaceAll(("(?<=\d)(?=(\d\d\d)+(?!\d))"),",");
             return formattedPrice;
         }
+        self.selectedTabId = "tab_default_1";
+        self.selectedTab = function(tabId){
+            self.selectedTabId = tabId;
+        }
     }
 
 })();
