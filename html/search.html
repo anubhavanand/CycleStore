@@ -44,7 +44,7 @@
                 <strong>
                     <a href="#" ng-click="navCtrl.showProductDetailPage(record)"> 
                         <p>{{record.name}}</p>
-                        <p>Price Rs {{record.price}}\-</p>
+                        <p>{{record.price | currency : "Rs"}}</p>
                         <div class="promotion">
                             {{record.offer}}
                         <div>

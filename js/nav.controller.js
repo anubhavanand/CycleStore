@@ -127,14 +127,16 @@
         self.showProductDetailPage = function (product) {
             //clear previous data before making a new search
             self.productDetail = {};
+            self.productFormattedPrice = "";
             self.productDetail = product;
-            $scope.$parent.ctrl.showProductDetailPage();
+            $scope.$parent.ctrl.showProductDetailPage(product);
+            self.calculateDiscountedPrice(product);
         }
 
-        self.showformatedPrice = function (price) {
-            formattedPrice = (price).replaceAll(("(?<=\d)(?=(\d\d\d)+(?!\d))"),",");
-            return formattedPrice;
+        self.calculateDiscountedPrice = function (product) {
+            self.productDiscountedPrice = product.price*(1-product.discount/100);
         }
+
         self.selectedTabId = "tab_default_1";
         self.selectedTab = function(tabId){
             self.selectedTabId = tabId;
