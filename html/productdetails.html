@@ -1,7 +1,7 @@
 <div class="productDetailSection" ng-show="ctrl.enableProductDetailPage">
     <div class="imageSection">
         <p class="text-info">
-            <img ng-src="{{navCtrl.productDetail.picture.medium}}" alt="{{navCtrl.productDetail.name}}" class="img-responsive"/> {{navCtrl.productDetail.description}}
+            <img ng-src="{{navCtrl.productDetail.picture.medium}}" alt="{{navCtrl.productDetail.name}}" class="img-responsive" />            {{navCtrl.productDetail.description}}
             <br />
         </p>
     </div>
@@ -12,9 +12,14 @@
         <h3>{{navCtrl.productDetail.name}}</h3>
         <br/>
         <h4>Price</h4>
-        <h3>{{navCtrl.productDetail.price | currency : "Rs"}}</h3>
-        <h4>Discounted Price</h4>
-        <h3>{{navCtrl.productDiscountedPrice | currency : "Rs"}}</h3>
+        <span ng-if="navCtrl.productDetail.discount === 0">
+            <h3>{{navCtrl.productDetail.price | currency : "Rs"}}</h3>
+        </span>
+        <span ng-if="navCtrl.productDetail.discount > 0">
+            <h3><s>{{navCtrl.productDetail.price | currency : "Rs"}}</s></h3>
+            <h4>Discounted Price</h4>
+            <h3>{{navCtrl.productDiscountedPrice | currency : "Rs"}}</h3>
+        </span>
         <button class="btn btn-block btn-success" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
                 <i class="icon-shopping-cart icon-white" /> add to cart
             </button>

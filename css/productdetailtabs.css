@@ -6,9 +6,9 @@
 .content-quality p span{display:block;}
 .tabtop li a{font-family:'Lato', sans-serif;font-weight:700;color:#1b2834;border-radius:0px;margin-right:22.008px;border:1px solid #ebebeb !important;}
 .tabtop .active a:before{content:"♦";position:absolute;top:15px;left:82px;color:#e31837;font-size:30px;}
-.tabtop li a:hover{color:#e31837 !important;text-decoration:none;}
+.tabtop li a:hover{color:blue !important;text-decoration:none;}
 .tabtop .active a:hover{color:#fff !important;}
-.tabtop .active a{background-color:#e31837 !important;color:#FFF !important;}
+.tabtop .active a{background-color:blue !important;color:#FFF !important;}
 .margin-tops{margin-top:30px;}
 .tabtop li a:last-child{padding:10px 22px;}
 .thbada{padding:10px 28px !important;}

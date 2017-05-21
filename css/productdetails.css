@@ -20,12 +20,12 @@
 
 .cartSection h3{
     font-family:'Lato', sans-serif;
-    color: red;
+    color: blue;
 }
 
 .cartSection h4{
     font-family:'Lato', sans-serif;
-    color: darkgrey;
+    color:#1b2834;
     font-weight:900;
 }
 
