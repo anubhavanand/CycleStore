@@ -40,7 +40,8 @@
                         <td class="tdRight">{{item.price * item.quantity | currency : "Rs"}}</td>
                         <td class="tdCenter" title="remove from cart">
                             <a href="" ng-click="navCtrl.addItemToCart(item.sku, item.name, item.price, -10000000)">
-                            <i class="icon-remove" />
+                            <span class="glyphicon glyphicon-remove-sign"></span>
+                          
                         </a>
                         </td>
                     </tr>
@@ -59,10 +60,10 @@
             <div class="span4">
                 <p class="text-info">
                     <button class="btn btn-block" ng-click="ctrl.showSearchPage()">
-                    <i class="icon-chevron-left" /> back to store
+                    <span class="glyphicon glyphicon-circle-arrow-left"></span> Back to store
                 </button>
                     <button class="btn btn-block btn-danger" ng-click="navCtrl.clearItems()" ng-disabled="navCtrl.getTotalCount() < 1">
-                    <i class="icon-trash icon-white" /> clear cart
+                    <span class="glyphicon glyphicon-trash"></span> Clear cart
                 </button>
                 </p>
 
@@ -70,13 +71,13 @@
 
                 <p class="text-info">
                     <button class="btn btn-block btn-primary" ng-click="cart.checkout('PayPal')" ng-disabled="cart.getTotalCount() < 1">
-                    <i class="icon-ok icon-white" /> check out using PayPal
+                    <span class="glyphicon glyphicon-ok"></span> check out using PayPal
                 </button>
                     <button class="btn btn-block btn-primary" ng-click="cart.checkout('Google')" ng-disabled="cart.getTotalCount() < 1">
-                    <i class="icon-ok icon-white" /> check out using Google
+                    <span class="glyphicon glyphicon-ok"></span> check out using Google
                 </button>
                     <button class="btn btn-block btn-primary" ng-click="cart.checkout('Stripe')" ng-disabled="cart.getTotalCount() < 1">
-                    <i class="icon-ok icon-white" /> check out using Stripe
+                    <span class="glyphicon glyphicon-ok"></span> check out using Stripe
                 </button>
                 </p>
                 <!-- Stripe needs a form to post to -->

@@ -21,23 +21,22 @@
             <h3>{{navCtrl.productDiscountedPrice | currency : "Rs"}}</h3>
         </span>
         <a href="#" title="go to shopping cart" ng-disabled="navCtrl.getTotalCount() < 1" ng-click="ctrl.showShoppingCartPage()">
-            <i class="icon-shopping-cart" />
+            <span class="glyphicon glyphicon-shopping-cart"></span>
             <b>{{navCtrl.getTotalCount()}}</b> items, <b>{{navCtrl.getTotalPrice() | currency : "Rs"}}</b>
             <span ng-show="navCtrl.getTotalCount(navCtrl.productDetail) > 0"> this item is in the cart</span>
         </a>
         <br/>
         <button class="btn btn-block btn-success" ng-click="navCtrl.addItemToCart(navCtrl.productDetail.id, navCtrl.productDetail.name, navCtrl.productDiscountedPrice, 1)">
-                <i class="icon-shopping-cart icon-white" /> add to cart
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to cart
             </button>
         <button class="btn btn-block btn-danger" ng-click="navCtrl.addItemToCart(navCtrl.productDetail.id, navCtrl.productDetail.name, navCtrl.productDiscountedPrice, -10000)" ng-disabled="navCtrl.getTotalCount(navCtrl.productDetail) <= 0">
-                <i class="icon-trash icon-white" /> remove from cart
+                <span class="glyphicon glyphicon-trash"></span> Remove from cart
             </button>
         <button class="btn btn-block" onclick="window.location.href=''">
-                <i class="icon-chevron-left" /> back to store
+                <span class="glyphicon glyphicon-circle-arrow-left"></span> Back to store
         </button>
         <button class="btn btn-block" ng-click="ctrl.showShoppingCartPage()" title="go to shopping cart" ng-disabled="navCtrl.getTotalCount() < 1">
-            <i class="icon-shopping-cart" />
-            Go to shopping cart
+            <span class="glyphicon glyphicon-shopping-cart"></span> Go to shopping cart
         </button>
     </div>
 
