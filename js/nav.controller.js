@@ -134,12 +134,43 @@
         }
 
         self.calculateDiscountedPrice = function (product) {
-            self.productDiscountedPrice = product.price*(1-product.discount/100);
+            self.productDiscountedPrice = product.price * (1 - product.discount / 100);
         }
 
         self.selectedTabId = "tab_default_1";
-        self.selectedTab = function(tabId){
+        self.selectedTab = function (tabId) {
             self.selectedTabId = tabId;
+        }
+
+        // create shopping cart
+        var cart = new shoppingCart("CycleStore");
+
+        self.addItemToCart = function (sku, name, price, quantity) {
+            cart.addItem(sku, name, price, quantity);
+        }
+
+        self.getTotalCount = function (product) {
+            return cart.getTotalCount(product.id);
+        }
+
+        self.getTotalCount = function () {
+            return cart.getTotalCount();
+        }
+
+        self.getTotalPrice = function () {
+            return cart.getTotalPrice();
+        }
+
+        self.getItemsFromCart = function(){
+            return cart.getItems();
+        }
+
+        self.saveItems = function(){
+            cart.saveItems();
+        }
+
+        self.clearItems = function(){
+            cart.clearItems();
         }
     }
 

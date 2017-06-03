@@ -19,6 +19,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
     this.enableRegistrationPage = false;
     this.registrationSuccess = false;
     this.enableProductDetailPage = false;
+    this.enableShoppingCartPage = false;
 
     this.showHomePage = function () {
         this.enableSearchPage = false;
@@ -27,6 +28,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
         this.enableProductDetailPage = false;
+        this.enableShoppingCartPage = false;
     }
 
     this.showLoginPage = function () {
@@ -36,6 +38,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
         this.enableProductDetailPage = false;
+        this.enableShoppingCartPage = false;
     }
 
     this.showRegistrationPage = function () {
@@ -45,6 +48,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableRegistrationPage = true;
         this.registrationSuccess = false;
         this.enableProductDetailPage = false;
+        this.enableShoppingCartPage = false;
     }
 
     this.showSearchPage = function () {
@@ -54,6 +58,7 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
         this.enableProductDetailPage = false;
+        this.enableShoppingCartPage = false;
     }
 
     this.showProductDetailPage = function () {
@@ -62,7 +67,18 @@ function CycleStoreController($rootScope, $cookies, $http) {
         this.enableLoginPage = false;
         this.enableRegistrationPage = false;
         this.registrationSuccess = false;
+        this.enableShoppingCartPage = false;
         this.enableProductDetailPage = true;
+    }
+
+    this.showShoppingCartPage = function () {
+        this.showImage = false;
+        this.enableSearchPage = false;
+        this.enableLoginPage = false;
+        this.enableRegistrationPage = false;
+        this.registrationSuccess = false;
+        this.enableProductDetailPage = false;
+        this.enableShoppingCartPage = true;
     }
 
     function signOut() {
