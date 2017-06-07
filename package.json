@@ -1,0 +1,27 @@
+{
+  "name": "cyclestore",
+  "version": "1.0.0",
+  "description": "cycle store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anubhavanand/CycleStore.git"
+  },
+  "keywords": [
+    "cycle",
+    "store"
+  ],
+  "author": "Anubhav Anand, Gaurav Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anubhavanand/CycleStore/issues"
+  },
+  "homepage": "https://github.com/anubhavanand/CycleStore#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^3.0.1"
+  }
+}
