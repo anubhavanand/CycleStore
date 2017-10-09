@@ -1,58 +1,45 @@
 <!--div ng-controller="SearchController as searchCtrl"-->
 <div class="container searchContainer" ng-show="ctrl.enableSearchPage">
     <div class="toppane">
-        <H1>{{navCtrl.searchCategory}}</H1>
+        <h1 class="category">{{navCtrl.searchCategory}}</h1>
     </div>
 
-    <div class="leftpane">
-        <h4>Filters</h4>
-        <!--div class="breadcrumb">
-            <div style="float:left">
-                <i class="glyphicon glyphicon-home"></i>&nbsp;
+    <div class="searchPanelContainer">
+        <div class="leftpane">
+            <div><h4>Filters</h4></div>
+            <div>
+                <label><input type="text" ng-model="search.name" placeholder="Search" /></label>
             </div>
             <div>
-                <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="/html/ngBreadCrumbTemplate.html"></ui-breadcrumbs>
+                <div><label>Filter by Gender</label></div>
+                <div><input type="checkbox" ng-click="navCtrl.filterData('male', 'gender')"> Male/Unisex </input></div>
+                <div><input type="checkbox" ng-click="navCtrl.filterData('female', 'gender')"> Female </input></div>             
             </div>
-        </div-->
-        <label><input type="text" ng-model="search.name" placeholder="Search" /></label>
-        <br/>
-        <br/>
-        <label>Filter by Gender
-                <br>
-                <input type="checkbox" ng-click="navCtrl.filterData('male', 'gender')"> Male/Unisex </input>
-                <br>
-                <input type="checkbox" ng-click="navCtrl.filterData('female', 'gender')"> Female </input>
-                <br>
-        </label>
-        <br/>
-        <br/>
-        <label>Filter by Brand
-            <br/>
-            <div ng-repeat="m in navCtrl.brands">
-                <b><input type="checkbox" ng-click="navCtrl.filterData(m, 'brands')"/> {{m}}</b>
-                <br/>
+            <div>
+                <label>Filter by Brand</label>
+                <div ng-repeat="m in navCtrl.brands">
+                    <input type="checkbox" ng-click="navCtrl.filterData(m, 'brands')"/> {{m}}
+                </div>
             </div>
-        </label>
-    </div>
-    <!-- Left Pane Closing DIV-->
-    <div class="rightpane">
-        <div class="row">
-            <div class="col-xs-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                <a href="#" class="thumbnail" ng-click="navCtrl.showProductDetailPage(record)">
-                    <img ng-src="{{record.picture.thumbnail}}" />
-                </a>
-                <strong>
-                    <a href="#" ng-click="navCtrl.showProductDetailPage(record)"> 
-                        <p>{{record.name}}</p>
-                        <p>{{record.price | currency : "Rs"}}</p>
-                        <div class="promotion">
-                            {{record.offer}}
-                        <div>
+        </div>
+
+        <div class="rightpane">
+            <div class="row">
+                <div class="col-xs-3" ng-repeat="record in filtered = navCtrl.searchedData | filter:search | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+                    <a href="#" class="thumbnail" ng-click="navCtrl.showProductDetailPage(record)">
+                        <img ng-src="{{record.picture.thumbnail}}" />
                     </a>
-                </strong>
+                    <strong>
+                        <a href="#" ng-click="navCtrl.showProductDetailPage(record)"> 
+                            <p>{{record.name}}</p>
+                            <p>{{record.price | currency : "Rs"}}</p>
+                            <div class="promotion">
+                                {{record.offer}}
+                            <div>
+                        </a>
+                    </strong>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<!--Search container div End here   -->
